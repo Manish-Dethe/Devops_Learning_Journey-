@@ -1,7 +1,14 @@
-# Linux command cheat sheet
+# Day 2 - 
 
-- $ sudo su -  -> switching back to a root user
-- ls /         -> What are the file system are present or what are the directories which were created,   / means it is a root
+## Topics Covered
+- Basic Linux Commands
+- Read a file
+- Create a file
+- Edit or append content to a file
+- Create Directories
+- Remove files and directories
+
+## Commands Practiced
 
 ## Basic commands
 - date -> Show the current date and time
@@ -13,6 +20,7 @@
 - man -> Shows manual of command
 - username -> Shows your user name (not worked)
 - who /w -> Display who is online
+
 
 ## Read a file
 - ls -> (list) directory listing
@@ -27,7 +35,7 @@
 ## Create & Delete file/Directory
 - touch -> create a 0 bites file
 - ls -l -> (long list) gives the detail information about the files, also gives in alphabetic order, (ll command) is also similar to it 
-- ls -l -t -> gives the detail information of the file, sorted by most recently modified, t means timestamp(file which are created recently    will be shown above)
+- ls -l -t -> gives the detail information of the file, sorted by most recently modified, t means timestamp(file which are created recently will be shown above)
 - ls -l -t -r -> gives the detail information of the file, sorted by most recently modified in reverse order
 - ls -ltr -> all the three combined
 - cat > filename -> create file and allow to write inside the file
@@ -46,3 +54,12 @@
 
 ## Extra command
 - tree -> will show the whole structure of files 
+
+## Notes
+- Flag(-) -> with this symbol whatever will be written is flag and this is used to tell how to modify the answer based on the flag used
+- cat > file1 -> if some data is present in the file1 then it will overwrite that data, if file1 is empty then its ok
+- In listing the files, if it starts from - then it is a file and if it starts from d then it is the directory
+- If i do mkdir dir1 dir2 dir3 , i can create the sub directories at a time
+- If we delete using rm,  then their is no recycle bin in linux but in windows it can be recycled
+
+- For nano -> To open - nano filename, To save(write) - Ctrl + O, To exit -> Ctrl + X
