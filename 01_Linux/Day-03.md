@@ -1,51 +1,14 @@
-# Linux command cheat sheet
+# Day 3 - 
 
-- $ sudo su -  -> switching back to a root user
-- ls /         -> What are the file system are present or what are the directories which were created,   / means it is a root
+## Topics Covered
+- Copy files or directories
+- Move or rename a file
+- Change directory
+- How to search a file
+- Search a word in a file
+- Replace a word in a file
 
-## Basic commands
-- date -> Show the current date and time
-- cal -> Shows this months calender
-- uptime -> Show current uptime (From who much time the system is on)
-- whoami -> Who are you logged in as
-- finger -> Display information about user
-- users/id -> Shows user information
-- man -> Shows manual of command
-- username -> Shows your user name (not worked)
-- who /w -> Display who is online
-
-## Read a file
-- ls -> (list) directory listing
-- pwd -> (present working directory) in which directory you are
-- cat filename -> view file content
-- less -> view a file page by page
-- more -> output the content of file
-- head -> output the first 10 lines of file, can also be used like (head -20 filename -> gives the first 20 lines)
-- tail -> output the last 10 lines of file
-- page -> display file page by page (not worked)
-
-## Create & Delete file/Directory
-- touch -> create a 0 bites file
-- ls -l -> (long list) gives the detail information about the files, also gives in alphabetic order, (ll command) is also similar to it 
-- ls -l -t -> gives the detail information of the file, sorted by most recently modified, t means timestamp(file which are created recently    will be shown above)
-- ls -l -t -r -> gives the detail information of the file, sorted by most recently modified in reverse order
-- ls -ltr -> all the three combined
-- cat > filename -> create file and allow to write inside the file
-- cat >> filename -> if we add some data then it will be appended to the file without removing the old one.
-- cat filename -> used to open the file
-- nano filename -> create a file if filename doesn't exist
-- vi filename -> create a file if filename doesn't exist
-- cd -> is used to change the directory
-- cd .. -> come out from the directory
-
-## Remove Files and Directories
-- rm filename -> remove the file, (can also use rm file1 file2 for removing more than one file)
-- rm -f -> if it is asking for the permission then we can use this to force remove the file without permission
-- rm -f -r -> recursively delete all the content in the directory, (rm -rf can also be used)
-- rm -rf * -> will delete all the filess and directories which are present (all of them), be causious while using this command
-
-## Extra command
-- tree -> will show the whole structure of files 
+## Commands Practiced
 
 ## Copy files or directories
 - cp file1 file2 -> The data present in file1 (source file) will be copied in file2 (destination file)
@@ -83,3 +46,14 @@
 - sed -i 's/old_text/new_text/' file_name -> Replaces every occurrence of old_text with new_text in the entire file and saves the changes, (i -> edit the file directly), it will update the original file
 - sed -n '5,10p' file_name -> Displays only lines 5 to 10 from the file, (n -> dont print anything by default, '5,10p' -> print line from 5 to 10)
 - sed -n '10,20d' file_name -> remove the line from 10 to 20 after that it will gonna display
+
+## Notes
+- If we copy the data from file to directory then first it will check wheather the file is present in directory or not, if it is present it will do nothing and if it is not present then it will simply copy the file to the directory
+- cp command is not able to copy file from directory to directory ,but we can use flags for that (cp -R dir1 dir2), also if the dir2 is not created it will create the dir2
+- We cannot copy a directory into a file
+- If you are staring your path from / , like(/root/dir1) then it is the absolute path
+- For directory we cannot use cat we have to use cd -> just for going inside any directory
+- Whenever we use flags we get extra features
+- | (pipe) -> It is used to combine two or more commands
+
+- you can use esc and after that d/word , word refer to upto which line you have to delete
