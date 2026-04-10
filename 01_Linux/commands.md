@@ -33,6 +33,8 @@
 - cat > filename -> create file and allow to write inside the file
 - cat >> filename -> if we add some data then it will be appended to the file without removing the old one.
 - cat filename -> used to open the file
+- cat /etc/passwd -> Shows all the user, and their path
+- sudo su -> going into the root user
 - nano filename -> create a file if filename doesn't exist
 - vi filename -> create a file if filename doesn't exist
 - cd -> is used to change the directory
@@ -83,3 +85,30 @@
 - sed -i 's/old_text/new_text/' file_name -> Replaces every occurrence of old_text with new_text in the entire file and saves the changes, (i -> edit the file directly), it will update the original file
 - sed -n '5,10p' file_name -> Displays only lines 5 to 10 from the file, (n -> dont print anything by default, '5,10p' -> print line from 5 to 10)
 - sed -n '10,20d' file_name -> remove the line from 10 to 20 after that it will gonna display
+
+
+
+## Use creation
+- useradd john -> will create the user named john
+- sudo adduser john -> will create user with home directory and all (worked in my linux)
+- usermod -G john mark -> Will add the mark to the john group
+- id mark -> show the details and id of mark
+
+## Create password
+- passwd john -> Will create the password for the john user
+- sudo passwd john
+
+- nano /etc/ssh//sshd_config -> (If we are doing in aws server then there will be private key authentication, also the PasswordAuthentication is selected no so we have to open using nano and edit it (no->yes) so that we can use password, for that above command is their)
+- service sshd reload -> If we update any configuration then we need to update(reload) our services
+
+- su - john -> To go inside the john user (or sudo su - john)
+- cd ~ -> To go in home directory
+
+## Permissions
+- ls -ld /home/john -> Permissions for the directory
+- chmod u+x file1 -> will give the user permission to execute
+- chod u+x,g-w,o=w file1 -> will give the user permission to execute, remove the write permission for group, give the other to write permission
+- chown john:john file2 -> will change the owner to john and group to john of file2
+- chown john file3 -> will only change the ownership to john
+
+- file file1 -> Simply tells what type of file it is (ASCII text, directory, character, block or linked file)
