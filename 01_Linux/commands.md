@@ -107,8 +107,36 @@
 ## Permissions
 - ls -ld /home/john -> Permissions for the directory
 - chmod u+x file1 -> will give the user permission to execute
-- chod u+x,g-w,o=w file1 -> will give the user permission to execute, remove the write permission for group, give the other to write permission
+- chmod u+x,g-w,o=w file1 -> will give the user permission to execute, remove the write permission for group, give the other to write permission
 - chown john:john file2 -> will change the owner to john and group to john of file2
 - chown john file3 -> will only change the ownership to john
 
 - file file1 -> Simply tells what type of file it is (ASCII text, directory, character, block or linked file)
+
+
+## System Management
+- history -> List all comands executed by a user
+- free -> Gives how much free memory of a server is present and how much is used (gives in kb)
+- free -m -> gives in mb
+- cat /proc/memoinfo -> Displays memory information
+- cat /proc/cpuinfo -> Displays CPU information
+- uname -a -> Show kernel information
+- du -> (Discuses of directory)Show directory space usage
+- du -m -> Shows in mb
+- du man -> To see how much options are present in this command
+- du -k /var | sort -rn head -> Will give all the top 10 files having more space
+- df -> Shows the filesystem in kb
+- df -m -> gives in mb
+- whereis -> Show possible locations of app
+- which -> Show which app will be run by default
+
+ls -la -> Will give the files but also the hidden files (which start with .), .bashhistory file is there which stores all the commands
+
+## Software Management
+- Commands
+ 1. yum install <package name>
+ 2. yum remove <package name>
+ 3. yum update <package name>
+ 4. yum info <package name>
+ 5. yum list available
+ 6. yum list installed
