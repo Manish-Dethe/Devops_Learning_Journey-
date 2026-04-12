@@ -88,7 +88,7 @@
 
 
 
-## Use creation
+## User creation
 - useradd john -> will create the user named john
 - sudo adduser john -> will create user with home directory and all (worked in my linux)
 - usermod -G john mark -> Will add the mark to the john group
