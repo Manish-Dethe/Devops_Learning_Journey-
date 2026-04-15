@@ -216,3 +216,13 @@ ls -la -> Will give the files but also the hidden files (which start with .), .b
 - 00 14 * * 6 Command -> Execute a job at 2:00 PM on every Saturday
 - 00 00 01 06 * Command -> Execute a job at 12:00 on 1st July
 - 30 15 25 * * Command -> Execute a job at 3:30 PM on every month 25th
+
+## Softlink (Shortcut file)
+ 1. Size of the link file is equal to no. of characters in the name of original file
+ 2. If original file is deleted, link is broken and data is lost
+ 3. Command : ln -s <src_file> <dest_file>
+
+## Hardlink (Backup file)
+ 1. Size of the both file is same
+ 2. If original file is deleted then also link wil contain data
+ 3. Command : ln <src_file> <dest_file>
