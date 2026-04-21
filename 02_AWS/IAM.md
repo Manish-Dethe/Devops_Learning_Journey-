@@ -100,3 +100,109 @@
 - Example:
   - YubiKey (3rd party)  
 - Supports multiple root and IAM users using a single security key  
+
+# AWS Access: Keys, CLI and SDK
+
+## How Can Users Access AWS?
+You have three options:
+
+1. **AWS Management Console**
+   - Protected by password + MFA  
+
+2. **AWS CLI (Command Line Interface)**
+   - Protected by access keys  
+
+3. **AWS SDK**
+   - Used in code  
+   - Protected by access keys  
+
+## Access Keys
+- Generated via AWS Console  
+- Managed by IAM users  
+
+### Important
+- Access keys are **secret** (like passwords)  
+- Do NOT share them  
+
+## Components
+- **Access Key ID** → like username  
+- **Secret Access Key** → like password  
+
+# What is AWS CLI?
+- Tool to interact with AWS services via command line  
+- Uses public AWS APIs  
+- Can automate tasks using scripts  
+- Open source (available on GitHub)  
+- Alternative to AWS Management Console  
+
+# What is AWS SDK?
+- AWS Software Development Kit (SDK)  
+- Language-specific APIs (set of libraries)  
+- Enables access and management of AWS services programmatically  
+- Embedded within your application  
+
+## Supported SDK Languages
+- SDks(JavaScript, Python, PHP, .NET, Ruby, Java, Go, Node.js, C++)  
+- Mobile SDKs (Android, iOS)  
+- IoT SDKs (Embedded devices like Arduino)  
+
+## AWS CLI
+- Built using AWS SDK (Python – boto3)
+
+# IAM Roles for Services
+- Some AWS services need permissions to perform actions  
+
+## IAM Roles
+- Assign permissions to AWS services  
+- Example:
+  - EC2 Instance Roles  
+  - Lambda Roles  
+  - Roles for CloudFormation  
+
+# IAM Security Tools
+
+## 1. IAM Credentials Report (Account Level)
+
+- A report that lists **all users in your AWS account**  
+- Shows the **status of their credentials**
+
+## 2. IAM Access Advisor (User Level)
+
+- Shows **service permissions granted to a user**  
+- When those services were last accessed
+ 
+# IAM Guidelines & Best Practices
+- Don’t use the root account except for AWS account setup  
+- One physical user = one IAM user  
+- Assign users to groups and assign permissions to groups  
+- Create a strong password policy  
+- Enable and enforce MFA (Multi-Factor Authentication)  
+- Create and use roles for giving permissions to AWS services  
+- Use access keys for programmatic access (CLI / SDK)  
+- Audit permissions using IAM credentials report & IAM access advisor  
+- Never share IAM users or access keys  
+
+# Shared Responsibility Model (IAM Perspective)
+
+## What AWS is Responsible For (Security OF the Cloud)
+- Infrastructure (global network security)  
+- Configuration and vulnerability analysis  
+- Compliance validation  
+
+## What You (Customer) Are Responsible For (Security IN the Cloud)
+- Users, Groups, Roles, Policies management  
+- Enable MFA on all accounts  
+- Rotate access keys regularly  
+- Use IAM tools to apply appropriate permissions  
+- Analyze access patterns and review permissions  
+
+# IAM Summary
+- Users → mapped to a physical user, has password for AWS console  
+- Groups → contain users only  
+- Policies → JSON documents that define permissions  
+- Roles → used by AWS services (EC2, Lambda, etc.)  
+- Security -> MFA + strong password policy
+- AWS CLI → manage services using command line  
+- AWS SDK → manage services using programming languages  
+- Access Keys -> Used for CLI & SDK ,Must be kept secret  
+- Audit & Monitoring -> IAM credential report, IAM access advisor (last accessed services)  
