@@ -1,0 +1,11 @@
+INFO: User login successful
+WARNING: Disk space low
+ERROR: Database connection failed
+INFO: File uploaded
+ERROR: Server crashed
+WARNING: High CPU usage
+INFO: Backup completed
+ERROR: Permission denied
+INFO: Service restarted
+WARNING: Memory usage high
+ERROR: API request failed
