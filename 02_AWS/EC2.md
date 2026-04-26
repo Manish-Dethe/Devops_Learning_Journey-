@@ -223,4 +223,4 @@ m5.2xlarge
 - Spot  
 - Savings Plans  
 - Dedicated Host  
-- Dedicated Instance  
+- Dedicated Instance .
