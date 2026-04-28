@@ -70,3 +70,19 @@
 ## Scope
 - Built for a specific region  
 - Can be copied across regions  
+# Types of AMI
+## 1. Public AMI
+- Provided by AWS  
+## 2. Custom AMI
+- Created and managed by you  
+## 3. Marketplace AMI
+- Created by third parties  
+- Can be paid or free  
+
+# AMI Creation Process
+1. Launch EC2 instance  
+2. Customize it (install software, config)  
+3. Stop instance (for data consistency)  
+4. Create AMI  
+   - Automatically creates EBS snapshots  
+5. Launch new instances from AMI  
