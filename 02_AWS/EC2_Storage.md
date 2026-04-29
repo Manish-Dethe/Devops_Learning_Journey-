@@ -86,3 +86,83 @@
 4. Create AMI  
    - Automatically creates EBS snapshots  
 5. Launch new instances from AMI  
+
+# EC2 Image Builder
+- Used to **automate creation of VM or container images (AMIs)**  
+- Automates:
+  - Creation  
+  - Maintenance  
+  - Validation  
+  - Testing of AMIs  
+
+## Features
+- Can run on a **schedule**
+  - Weekly  
+  - On package updates  
+
+- **Free service**
+  - You only pay for underlying resources (EC2, storage, etc.)
+
+## Workflow
+1. Start with base image  
+2. Apply build components (install software, configs)  
+3. Create new AMI  
+4. Launch test instance  
+5. Run tests (security, validation)  
+6. Distribute AMI (can be multi-region)  
+
+# EC2 Instance Store
+
+- High-performance **local storage (attached to physical host)**  
+## Characteristics
+- Better I/O performance than EBS  
+- **Ephemeral storage** (temporary)  
+- Data is LOST when:
+  - Instance stops  
+  - Instance terminates  
+## Use Cases
+- Buffer / cache  
+- Scratch data  
+- Temporary files  
+## Important
+- No automatic backup  
+- Backup & replication = **your responsibility**  
+
+# EFS (Elastic File System)
+- Managed **NFS (Network File System)**  
+- Can be mounted on **multiple EC2 instances simultaneously**  
+## Features
+- Works with **Linux EC2 instances**  
+- Supports **multi-AZ access**  
+- Highly available & scalable  
+- Pay per use (no capacity planning)  
+## Notes
+- More expensive than EBS  
+- Ideal for shared file systems  
+
+# EBS vs EFS
+
+| Feature        | EBS                         | EFS                          |
+|---------------|-----------------------------|------------------------------|
+| Type          | Block storage               | File storage (NFS)           |
+| Attachment    | One instance (mostly)       | Multiple instances           |
+| AZ Scope      | Single AZ                   | Multi-AZ                     |
+| Performance   | High                        | Moderate                     |
+| Use Case      | Databases, OS disks         | Shared file systems          |
+| Cost          | Cheaper                     | More expensive               |
+
+
+# EFS Storage Classes
+## 1. Standard
+- For frequently accessed data  
+## 2. Infrequent Access (EFS-IA)
+- For files not accessed often  
+- Up to **~90% cheaper**  
+
+## Lifecycle Policy
+- Automatically move files to EFS-IA  
+- Example:
+  - Move files not accessed for 60 days  
+## Benefit
+- Transparent to application  
+- Cost optimized automatically  
