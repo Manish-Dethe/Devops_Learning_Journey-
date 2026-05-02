@@ -1,6 +1,6 @@
 # Linux Project 3: Log Automation Script
 
-## 📌 Objective
+## Objective
 The goal of this project is to automate log analysis using a shell script instead of manually running commands.
 
 ## What I Did
