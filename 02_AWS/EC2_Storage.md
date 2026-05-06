@@ -166,3 +166,18 @@
 ## Benefit
 - Transparent to application  
 - Cost optimized automatically  
+
+# Shared Responsibility Model for EC2 Storage
+
+## AWS Responsibility
+- Infrastructure management  
+- Replication for EBS volumes & EFS drives  
+- Replacing faulty hardware  
+- Ensuring AWS employees cannot access customer data  
+
+## User Responsibility
+- Setting up backup / snapshot procedures  
+- Configuring data encryption  
+- Managing responsibility of data stored on drives  
+- Understanding risks of using EC2 Instance Store  
+ 
