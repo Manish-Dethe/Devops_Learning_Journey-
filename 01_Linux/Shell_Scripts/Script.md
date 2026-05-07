@@ -96,3 +96,64 @@
 ## Accepting User Input (STDIN)
 - The read command accepts STDIN
 - Syntax: read -p "PROMPT" VARIABLE
+
+## Exit Status / Return Code
+- Every command returns an exit status
+- Range fromm 0 to 255
+- 0 = Success
+- Other than 0 = error condition
+- Use for error checking
+- Use man or info to find meaning of exit status
+
+## Checking the Exit Status
+- $? contains the return code of the previously executed command
+- ls /not/here
+- echo "$?" -> Output : 2
+
+```bash
+HOST="google.com"
+
+ping -c 1 $HOST
+
+if [ "$?" -eq "0" ]
+then
+    echo "$HOST reachable."
+else
+    echo "$HOST unreachable."
+fi
+```
+
+## && and ||
+# && = AND
+- mkdir /tmp/bak && cp test.txt /tmp/bak/
+
+# || = OR
+- cp test.txt /tmp/bak/ || cp test.txt /tmp
+
+## The semicolon
+- Seperate commands with a semicolon to ensure they all get executed
+- cp test.txt /tmp/bak/ ; cp test.txt /tmp
+- Same as:
+- cp test.txt /tmp/bak
+- cp test.txt /tmp
+
+## Exit Command
+- Explicitly define the return code (exit 0, exit 1, exit 2, exit 255, etc)
+- The default value is that of the last command executed
+
+```bash
+#!/bin/bash
+
+HOST="google.com"
+
+ping -c 1 $HOST
+
+if [ "$?" -ne "0" ]
+then
+    echo "$HOST unreachable."
+    exit 1
+fi
+
+exit 0
+```
+
