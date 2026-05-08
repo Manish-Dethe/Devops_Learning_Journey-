@@ -181,3 +181,63 @@
 - Managing responsibility of data stored on drives  
 - Understanding risks of using EC2 Instance Store  
  
+# Amazon FSx — Overview
+- Fully managed high-performance file systems on AWS
+## Types
+- FSx for Windows File Server
+- FSx for Lustre
+- FSx for NetApp ONTAP
+## Benefits
+- Managed service
+- Scalable
+- High performance
+
+# Amazon FSx for Windows File Server
+- Fully managed Windows-native shared file system
+## Features
+- Built on Windows File Server
+- Supports SMB protocol & NTFS
+- Integrated with Microsoft Active Directory
+- Accessible from:
+  - AWS
+  - On-premises infrastructure
+
+# Amazon FSx for Lustre
+- High-performance scalable file storage
+## Designed For
+- High Performance Computing (HPC)
+## Note
+- Lustre name derived from:
+  - Linux + Cluster
+
+# EC2 Instance Storage — Summary
+
+## EBS Volumes
+- Network drives attached to EC2
+- One EC2 instance at a time
+- Bound to an Availability Zone
+- Snapshots can be used for backup/migration
+
+## AMI
+- Preconfigured EC2 image
+- Includes:
+  - OS
+  - Software
+  - Configurations
+
+## EC2 Image Builder
+- Automates build, test, and distribution of AMIs
+
+## EC2 Instance Store
+- High-performance local storage
+- Data lost when instance stops/terminates
+
+## EFS
+- Shared network file system
+- Can attach to many EC2 instances
+
+## FSx
+### FSx for Windows
+- Windows-native shared file system
+### FSx for Lustre
+- High-performance file system for HPC
