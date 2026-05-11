@@ -1,0 +1,24 @@
+===== System Health Report =====
+
+Date & Time:
+Monday 11 May 2026 04:41:21 PM IST
+
+System Uptime:
+ 16:41:21 up 36 min,  1 user,  load average: 0.02, 0.04, 0.06
+
+Memory Usage:
+               total        used        free      shared  buff/cache   available
+Mem:            3916         783        2070          32        1061        2882
+Swap:           2679           0        2679
+
+Disk Usage:
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           392M  1.8M  390M   1% /run
+/dev/sda3        24G   16G  7.3G  68% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+/dev/sda2       512M  6.1M  506M   2% /boot/efi
+tmpfs           392M  100K  392M   1% /run/user/1000
+
+CPU Information:
+model name	: AMD Ryzen 5 5600H with Radeon Graphics
