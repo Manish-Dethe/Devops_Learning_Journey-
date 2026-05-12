@@ -1,0 +1,16 @@
+#!/bin/bash
+
+read -p "Enter the file or directory name: " path
+
+if [ -f "$path" ]; then
+	echo "It is a regular file. "
+elif [ -d "$path" ]; then
+	echo "It is a directory."
+elif [ -e "$path" ]; then
+	echo "It is another type of file"
+else
+	echo "File does not exit."
+	exit
+fi
+ls -l "$path"
+

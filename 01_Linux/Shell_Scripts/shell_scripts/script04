@@ -1,0 +1,5 @@
+#!/bin/bash
+for animals in man dog bear pig cat sheep;
+	do
+		echo "$animals"
+done
