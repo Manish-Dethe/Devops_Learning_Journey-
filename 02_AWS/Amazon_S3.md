@@ -63,3 +63,67 @@
   - Lifecycle management
 ## Version ID
 - Present if versioning is enabled
+
+# Amazon S3 – Security
+
+## User-Based Security
+- IAM Policies:
+  - Define which API calls should be allowed for a specific IAM user
+## Resource-Based Security
+### Bucket Policies
+- Bucket-wide rules from the S3 console
+- Allows cross-account access
+### Object Access Control List (ACL)
+- Finer-grain permissions
+- Can be disabled
+### Bucket Access Control List (ACL)
+- Less common
+- Can be disabled
+## Important Note
+An IAM principal can access an S3 object if:
+- The user IAM permissions ALLOW it  
+  **OR**
+- The resource policy ALLOWS it
+AND
+- There is no explicit DENY
+## Encryption
+- Encrypt objects in Amazon S3 using encryption keys
+
+# S3 Bucket Policies
+
+## JSON-Based Policies
+### Components
+- Resources:
+  - Buckets and objects
+- Effect:
+  - Allow / Deny
+- Actions:
+  - Set of APIs to allow or deny
+- Principal:
+  - The account or user to apply the policy to
+
+## Use S3 Bucket Policies To
+- Grant public access to the bucket
+- Force objects to be encrypted at upload
+- Grant access to another AWS account (Cross-Account)
+
+# Example – Public Access Using Bucket Policy
+- Anonymous website visitor accesses S3 bucket
+- S3 Bucket Policy allows public access
+
+# Example – User Access to S3 using IAM Permissions
+- IAM Policy attached to IAM User
+- IAM User accesses S3 Bucket
+
+# Example – EC2 Instance Access using IAM Role
+- IAM Role provides permissions
+- EC2 Instance accesses S3 Bucket
+
+# Example – Cross-Account Access using Bucket Policy
+- IAM User from another AWS account
+- S3 Bucket Policy allows cross-account access
+
+# Bucket Settings for Block Public Access
+- These settings were created to prevent company data leaks
+- If your bucket should never be public, leave these settings ON
+- Can also be configured at the account level
