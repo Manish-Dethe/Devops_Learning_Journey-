@@ -273,3 +273,181 @@ Formerly called Amazon S3 Glacier.
 - Configurable from `90 days` to `700+ days`
 ### Deep Archive Access Tier (Optional)
 - Configurable from `180 days` to `700+ days`
+
+# S3 Express One Zone
+- High performance, single Availability Zone storage class
+- Objects stored in a Directory Bucket (bucket in a single AZ)
+- Handles hundreds of thousands of requests per second with single-digit millisecond latency
+- Up to `10x` better performance than S3 Standard with lower cost
+- High durability (`99.999999999%`) and availability (`99.95%`)
+- Co-locate storage and compute resources in the same AZ to reduce latency
+## Use Cases
+- Latency-sensitive applications
+- Data-intensive apps
+- AI & ML training
+- Financial modeling
+- Media processing
+- HPC workloads
+## Integrations
+- Amazon SageMaker
+- Model Training
+- Athena
+- EMR
+- Glue
+
+# S3 Encryption
+## Server-Side Encryption (Default)
+1. User uploads file
+2. Amazon S3 encrypts the file
+3. File stored encrypted in S3 bucket
+4. File decrypted when retrieved
+## Client-Side Encryption
+1. User encrypts file before upload
+2. Encrypted file uploaded to S3
+3. Amazon S3 stores encrypted object
+4. User decrypts file after download
+
+# IAM Access Analyzer for S3
+- Ensures only intended people have access to S3 buckets.
+- Detects:
+  - Publicly accessible buckets
+  - Buckets shared with other AWS accounts
+## Evaluates
+- S3 bucket policies
+- S3 ACLs
+- S3 Access Point policies
+- Powered by IAM Access Analyzer.
+
+# Shared Responsibility Model for S3
+## AWS Responsibilities
+- Infrastructure
+- Global security
+- Durability
+- Availability
+- Sustain concurrent loss of data in two facilities
+- Compliance of infrastructure
+## User Responsibilities
+- S3 Versioning
+- S3 Bucket Policies
+- S3 Replication setup
+- Logging and Monitoring
+- S3 Storage Classes
+- Data encryption at rest and in transit
+
+# AWS Snowball
+- Highly secure portable devices used to collect and process data at the edge and migrate data into and out of AWS.
+- Helps migrate petabytes of data.
+## Data Migration Challenges
+- Limited connectivity
+- Limited bandwidth
+- High network cost
+- Shared bandwidth
+- Connection stability
+## When to Use Snowball
+- If transferring over the network takes more than a week.
+# Snowball Data Transfer
+
+## Direct Upload to S3
+- Client → Internet → Amazon S3 Bucket
+## Using Snowball
+- Client → AWS Snowball → Ship Device → AWS → Import/Export → Amazon S3 Bucket
+
+# What is Edge Computing?
+- Process data while it is being created on an edge location.
+- Example:
+  - A truck on the road
+  - Ship on the sea
+  - Mining station underground
+## Challenges
+- These locations may have limited internet and no easy access to computing power.
+# Snowball Edge Device
+- Used to perform edge computing.
+- Snowball Edge provides:
+  - Optimized compute
+  - Optimized storage
+  - Both compute and storage depending on the use case
+## Capabilities
+- Can run EC2 instances or Lambda functions at the edge.
+- Useful for:
+  - Data preprocessing
+  - Machine learning
+  - Transcoding media
+
+# Snowball Edge Pricing
+- Pay for:
+  - Device usage
+  - Data transfer out of AWS
+## Data Transfer
+- Data transfer into Amazon S3 is `$0.00 per GB`
+- Pricing is on-demand
+## Includes
+- One-time service fee per job
+- 80 TB included for Snowball Edge Storage Optimized
+- 210 TB included for Snowball Edge Storage Optimized
+## Shipping
+- Shipping days are not counted toward included days
+- Additional daily charges apply after included period
+# Committed Upfront Pricing
+- Pay in advance for:
+  - Monthly usage
+  - 1-year usage
+  - 3-year usage
+- Up to `62%` discounted pricing
+
+# Hybrid Cloud for Storage
+- AWS is pushing for a hybrid cloud model.
+- Part of your infrastructure remains on-premises.
+- Part of your infrastructure runs in the cloud.
+## Reasons for Hybrid Cloud
+- Long cloud migrations
+- Security requirements
+- Compliance requirements
+- IT strategy
+# Amazon S3 and Hybrid Cloud
+- Amazon S3 is a proprietary storage technology unlike EFS/NFS.
+- To expose S3 data on-premises, AWS provides AWS Storage Gateway.
+
+# AWS Storage Gateway
+- Acts as a bridge between on-premises data and cloud data in S3.
+- Hybrid storage service that allows on-premises systems to seamlessly use AWS cloud storage.
+## Use Cases
+- Disaster recovery
+- Backup and restore
+- Tiered storage
+# Types of Storage Gateway
+- File Gateway
+- Volume Gateway
+- Tape Gateway
+
+# Amazon S3 – Summary
+## Buckets vs Objects
+- Buckets have globally unique names.
+- Buckets are tied to a region.
+# S3 Security
+- IAM Policies
+- S3 Bucket Policies
+- Public Access settings
+- S3 Encryption
+# S3 Static Websites
+- Amazon S3 can host static websites.
+# S3 Versioning
+- Maintains multiple versions of files.
+- Helps prevent accidental deletions.
+# S3 Replication
+- Same-Region Replication (SRR)
+- Cross-Region Replication (CRR)
+## Requirements
+- Versioning must be enabled.
+# S3 Storage Classes
+- Standard
+- IA
+- One Zone-IA
+- Intelligent Tiering
+- Glacier Instant Retrieval
+- Glacier Flexible Retrieval
+- Glacier Deep Archive
+# Snowball
+- Used to transfer important data into AWS using a physical device.
+- Supports edge computing.
+# Storage Gateway
+- Hybrid solution to extend on-premises storage to Amazon S3.
