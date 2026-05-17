@@ -115,3 +115,97 @@ Proxy Fleet (Managed by Aurora)
 Aurora Instances
    ↓
 Shared Storage Volume
+
+# RDS Deployments: Read Replicas, Multi-AZ, Multi-Region
+## Read Replicas
+Purpose:
+- Scale the read workload of your database
+- Can create up to 15 read replicas
+- Data is written only to the main database
+
+Characteristics:
+- Read traffic goes to replicas
+- Write traffic goes to main database
+- Uses replication from main DB
+
+Architecture:
+
+Application
+    |
+    |---- Read ----> Read Replica
+    |
+    |---- Write ---> Main DB
+    |
+    |---- Read ----> Read Replica
+
+Replication:
+Main DB --> Read Replica(s)
+
+## Multi-AZ
+Purpose:
+- High availability
+- Automatic failover during AZ outage
+
+Characteristics:
+- Data written to main database
+- Replication to standby database
+- Only one standby AZ used as failover
+
+Architecture:
+
+Main DB ----Replication----> Failover DB
+
+Application
+      |
+      |---- Read/Write ----> Main DB
+
+If main DB fails:
+Application ---> Failover DB
+
+## Multi-Region (Read Replicas)
+Purpose:
+- Disaster recovery during region failures
+- Better local performance for global reads
+
+Characteristics:
+- Read replicas exist across regions
+- Replication cost applies
+
+Example Architecture:
+
+US-East-2             EU-East-1             AP-Southeast-2
+
+Read Replica  <---- Main DB ----> Read Replica
+
+Applications         Applications           Applications
+
+Read locally          Write to Main         Read locally
+
+# Amazon ElastiCache Overview
+- Similar to RDS but for managed Redis or Memcached
+- Cache is an in-memory database
+- High performance
+- Low latency
+- Reduces database load for read-intensive workloads
+
+AWS handles:
+- OS maintenance
+- Patching
+- Optimizations
+- Setup
+- Configuration
+- Monitoring
+- Failure recovery
+- Backups
+
+## ElastiCache Solution Architecture
+
+Client
+   |
+Elastic Load Balancer
+   |
+EC2 Instances (ASG)
+   |
+   |---- Read/Write Fast ----> ElastiCache
+   |
+   |---- Read/Write Slow ----> Amazon RDS
