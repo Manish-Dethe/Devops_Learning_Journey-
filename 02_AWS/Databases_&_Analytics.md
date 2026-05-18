@@ -209,3 +209,86 @@ EC2 Instances (ASG)
    |---- Read/Write Fast ----> ElastiCache
    |
    |---- Read/Write Slow ----> Amazon RDS
+
+# DynamoDB
+- Fully managed and highly available with replication across 3 AZs
+- NoSQL database (non-relational database)
+- Scales to massive workloads using distributed serverless architecture
+- Supports millions of requests per second
+- Supports trillions of rows and hundreds of TB storage
+- Fast and consistent performance
+- Single-digit millisecond latency for low-latency retrieval
+- Integrated with IAM for security, authorization, and administration
+- Low cost with auto-scaling capabilities
+- Table classes:
+  - Standard
+  - Infrequent Access (IA)
+
+## DynamoDB Data Type
+- DynamoDB is a Key-Value database
+
+# DynamoDB Accelerator (DAX)
+- Fully managed in-memory cache for DynamoDB
+- Provides up to 10x performance improvement
+- Reduces single-digit millisecond latency to microseconds
+- Secure, highly scalable, and highly available
+
+Difference from ElastiCache:
+- DAX is only for DynamoDB and tightly integrated with it
+- ElastiCache can be used with other databases
+
+Architecture:
+
+Applications
+      ↕
+DAX Accelerator
+      ↕
+Amazon DynamoDB Tables
+
+# DynamoDB Global Tables
+
+- Makes DynamoDB tables accessible with low latency across multiple regions
+- Supports active-active replication
+- Read and write operations can happen in any AWS region
+
+Architecture:
+
+Users
+   |
+US-East-1 DynamoDB Global Table
+   ↔ Replication ↔
+AP-Southeast-3 DynamoDB Global Table
+
+# Redshift Overview
+- Redshift is based on PostgreSQL
+- Not used for OLTP (Online Transaction Processing)
+- Used for OLAP (Online Analytical Processing)
+
+Features:
+- Loads data every hour instead of every second
+- Up to 10x faster than traditional warehouses
+- Scales to petabytes of data
+- Uses columnar storage instead of row-based storage
+- Supports MPP (Massively Parallel Processing)
+- Highly available
+- Pay based on provisioned instances
+- SQL interface for queries
+- Integrates with BI tools:
+  - AWS QuickSight
+  - Tableau
+
+# Redshift Serverless
+- Automatically provisions and scales warehouse capacity
+- Run analytics workloads without infrastructure management
+- Pay only for what you use
+
+Use Cases:
+- Reporting
+- Dashboard applications
+- Real-time analytics
+
+Steps:
+1. Enable Amazon Redshift Serverless for your AWS account
+2. Connect using Redshift Query Editor or another tool
+3. Redshift automatically provisions and scales based on workload
+4. Pay only for compute and storage used during analysis
