@@ -292,3 +292,151 @@ Steps:
 2. Connect using Redshift Query Editor or another tool
 3. Redshift automatically provisions and scales based on workload
 4. Pay only for compute and storage used during analysis
+
+# Amazon EMR
+
+EMR = Elastic MapReduce
+- Helps create Hadoop clusters for Big Data processing and analysis
+- Used to process vast amounts of data
+- Clusters can contain hundreds of EC2 instances
+- Supports:
+  - Apache Spark
+  - HBase
+  - Presto
+  - Flink
+
+Features:
+- Handles provisioning and configuration automatically
+- Supports auto-scaling
+- Integrates with Spot Instances
+
+Use Cases:
+- Data processing
+- Machine learning
+- Web indexing
+- Big data analytics
+
+# Amazon Athena
+- Serverless query service for analytics on S3 objects
+- Uses standard SQL queries
+- Supports:
+  - CSV
+  - JSON
+  - ORC
+  - Avro
+  - Parquet
+
+Built on:
+- Presto
+
+Pricing:
+- $5 per TB of data scanned
+
+Optimization:
+- Use compressed or columnar data formats to reduce cost
+
+Use Cases:
+- Business intelligence
+- Analytics
+- Reporting
+
+Exam Tip: Analyze data stored in S3 using serverless SQL → Use Athena
+
+Architecture:
+
+User
+   ↓
+Load Data
+   ↓
+S3 Bucket
+   ↓ Query & Analyze
+Amazon Athena
+   ↓ Reporting/Dashboard
+Amazon QuickSight
+
+# Amazon QuickSight
+- Serverless machine-learning powered business intelligence service
+- Creates interactive dashboards
+- Fast and scalable
+- Embeddable with session pricing
+
+Use Cases:
+- Business analytics
+- Data visualization
+- Ad-hoc analysis
+- Business insights
+
+Integrations:
+- RDS
+- Aurora
+- Athena
+- Redshift
+- S3
+
+# DocumentDB
+- AWS implementation compatible with MongoDB
+- NoSQL document database
+
+Features:
+- Stores JSON documents
+- Query and index support
+- Similar deployment concepts as Aurora
+- Fully managed
+- Highly available
+- Replication across 3 AZs
+- Storage grows automatically in 10 GB increments
+- Automatically scales to millions of requests per second
+
+# Amazon Neptune
+- Fully managed graph database
+
+Example social graph:
+- Users have friends
+- Posts have comments
+- Comments have likes from users
+- Users share and like posts
+
+Features:
+- Highly available across 3 AZs
+- Up to 15 read replicas
+- Optimized for highly connected datasets
+- Supports billions of relationships
+- Millisecond query latency
+- Multi-AZ replication support
+
+Use Cases:
+- Knowledge graphs (Wikipedia)
+- Fraud detection
+- Recommendation engines
+- Social networking
+
+# Amazon Timestream
+- Fully managed serverless time-series database
+- Fast and scalable
+- Automatically scales up/down
+
+Features:
+- Stores and analyzes trillions of events per day
+- Up to 1000x faster
+- Can reduce cost compared to relational databases
+- Built-in time-series analytics
+
+Use Cases:
+- Near real-time pattern analysis
+- Monitoring systems
+- IoT data
+
+# Amazon Managed Blockchain
+- Managed blockchain service
+
+Purpose:
+- Build applications where multiple parties can execute transactions
+- No central authority required
+
+Capabilities:
+- Join public blockchain networks
+- Create scalable private blockchain networks
+
+Supported frameworks:
+- Hyperledger Fabric
+- Ethereum
