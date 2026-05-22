@@ -440,3 +440,120 @@ Capabilities:
 Supported frameworks:
 - Hyperledger Fabric
 - Ethereum
+
+# AWS Glue
+- Managed ETL (Extract, Transform, Load) service
+- Useful for preparing and transforming data for analytics
+- Fully serverless
+
+Flow:
+S3 Bucket / RDS
+      ↓ Extract
+AWS Glue
+      ↓ Transform
+Amazon Redshift
+
+Additional Features:
+- Glue Data Catalog stores metadata/catalog of datasets
+- Used by:
+  - Athena
+  - Redshift
+  - EMR
+
+# AWS DMS (Database Migration Service)
+Purpose:
+- Quickly and securely migrate databases to AWS
+- Source database remains available during migration
+
+Migration Types:
+1. Homogeneous migration
+   - Example: Oracle → Oracle
+
+2. Heterogeneous migration
+   - Example: Microsoft SQL Server → Aurora
+
+Architecture:
+
+Source DB
+    ↓
+EC2 instance running DMS
+    ↓
+Target DB
+
+# Databases & Analytics Quick Summary
+
+Relational Databases:
+- RDS
+- Aurora (SQL)
+
+Differences:
+- Multi-AZ → High availability
+- Read Replicas → Read scaling
+- Multi-Region → Disaster recovery
+
+In-Memory Database:
+- ElastiCache
+
+Key-Value Database:
+- DynamoDB
+
+Warehouse / OLAP:
+- Redshift
+
+Big Data Cluster:
+- EMR
+
+Serverless SQL on S3:
+- Athena
+
+Dashboard Service:
+- QuickSight
+
+JSON NoSQL Database:
+- DocumentDB
+
+Database Migration:
+- DMS
+
+Graph Database:
+- Neptune
+
+Time-Series Database:
+- Timestream
+
+Managed Blockchain:
+- Amazon Managed Blockchain
+
+ETL Service:
+- AWS Glue
+
+# Other Compute Services
+- ECS
+- Lambda
+- Batch
+- Lightsail
+
+# What is Docker?
+- Docker is a software platform used to deploy applications
+- Applications are packaged into containers
+
+Advantages:
+- Runs consistently on any machine
+- No compatibility issues
+- Predictable behavior
+- Less work
+- Easier maintenance and deployment
+- Works with any language and operating system
+- Containers scale quickly
+
+# Docker Image Storage
+Docker images are stored in repositories.
+Public Repository:
+Docker Hub
+Examples:
+- Ubuntu
+- MySQL
+- NodeJS
+- Java
+Private Repository:
+Amazon ECR (Elastic Container Registry)
