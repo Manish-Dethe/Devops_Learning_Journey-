@@ -557,3 +557,145 @@ Examples:
 - Java
 Private Repository:
 Amazon ECR (Elastic Container Registry)
+
+# Docker vs Virtual Machines
+
+Docker:
+- Docker is a containerization technology (not exactly full virtualization)
+- Containers share resources with the host OS
+
+Virtual Machine Architecture:
+
+Apps
+↓
+Guest OS (VM)
+↓
+Hypervisor
+↓
+Host OS
+↓
+Infrastructure
+
+Docker Architecture:
+
+Apps
+↓
+Containers
+↓
+Docker Daemon
+↓
+Host OS
+↓
+Infrastructure
+
+Key Difference:
+- VM → each VM has its own Guest OS
+- Docker → containers share Host OS
+- Docker uses less resources and starts faster
+
+# Amazon ECS
+ECS = Elastic Container Service
+Purpose:
+- Launch Docker containers on AWS
+- AWS manages container lifecycle
+
+Features:
+- Must provision and maintain EC2 infrastructure
+- AWS starts/stops containers
+- Integrates with Application Load Balancer
+
+# AWS Fargate
+Purpose:
+- Run Docker containers without managing EC2 servers
+
+Features:
+- Serverless container service
+- No infrastructure provisioning
+- AWS runs containers based on CPU/RAM requirements
+- Simpler than ECS with EC2 management
+
+Difference:
+ECS:
+- You manage EC2 servers
+Fargate:
+- AWS manages infrastructure
+
+# Amazon ECR
+ECR = Elastic Container Registry
+
+Purpose:
+- Private Docker image repository on AWS
+
+Uses:
+- Store Docker images
+- ECS or Fargate pulls images from ECR
+
+# Amazon EKS
+EKS = Elastic Kubernetes Service
+
+Purpose:
+- Managed Kubernetes service on AWS
+
+Kubernetes:
+- Open-source system for deployment, management and scaling of containers
+
+Containers can run on:
+- EC2 instances
+- Fargate (serverless)
+
+Features:
+- Cloud-agnostic
+- Can run on AWS, Azure, GCP etc.
+
+# What is Serverless?
+Definition:
+- Developers do not manage servers directly
+- Only deploy code/functions
+
+Important:
+- Serverless does NOT mean servers do not exist
+- Servers exist but AWS manages them
+
+Examples:
+- Lambda
+- DynamoDB
+- Amazon S3
+- Fargate
+
+Benefits:
+- No provisioning
+- Automatic scaling
+- Less operational work
+
+# Why Lambda?
+Problems with EC2:
+- Virtual servers run continuously
+- Limited by CPU and RAM
+- Scaling requires manual intervention
+
+# Amazon Lambda Overview
+Lambda is:
+- Virtual functions with no server management
+- Runs on demand
+- Automatically scales
+
+Characteristics:
+- Short execution time
+- Event-driven
+- Pay only for execution time
+
+Flow:
+
+Event Trigger
+      ↓
+AWS Lambda Function
+      ↓
+Process Request
+      ↓
+Return Response
+
+Examples of Triggers:
+- S3 upload
+- API request
+- CloudWatch event
+- DynamoDB changes
