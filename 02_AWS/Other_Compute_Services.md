@@ -277,3 +277,122 @@ After free tier:
 Note:
 - Lambda is generally inexpensive
 - Popular because of low operational and scaling costs
+
+# Amazon API Gateway
+
+Example: Building a Serverless API
+
+Client
+   ↓ REST API
+API Gateway
+   ↓ Proxy Request
+AWS Lambda
+   ↓ CRUD Operations
+DynamoDB
+
+Features:
+- Fully managed service to create, publish, maintain, monitor and secure APIs
+- Serverless and scalable
+- Supports:
+   - REST APIs
+   - WebSocket APIs
+- Security support:
+   - User authentication
+   - API throttling
+   - API keys
+   - Monitoring
+
+# AWS Batch
+
+Features:
+- Fully managed batch processing at any scale
+- Can run hundreds of thousands of computing jobs
+- Batch jobs have:
+   - Start point
+   - End point
+- Dynamically launches:
+   - EC2 instances
+   - Spot instances
+- Automatically provisions required:
+   - Compute
+   - Memory
+- Submit or schedule jobs and AWS handles execution
+- Jobs are packaged as Docker images
+
+Runs on:
+- ECS
+- EKS
+- Fargate
+
+Benefits:
+- Cost optimization
+- Less infrastructure management
+
+Example Flow:
+
+Amazon S3
+    ↓ Trigger
+AWS Batch
+    ↓
+EC2 / ECS Processing
+    ↓
+Amazon S3 Output
+
+# Batch vs Lambda
+
+Lambda:
+- Time limit exists
+- Limited runtimes
+- Limited temporary disk space
+- Serverless
+
+Batch:
+- No time limit
+- Any runtime supported if packaged in Docker image
+- Uses EBS / Instance Store for storage
+- Relies on EC2 infrastructure
+
+# Amazon Lightsail
+
+Overview:
+- Provides:
+   - Virtual servers
+   - Storage
+   - Databases
+   - Networking
+
+Features:
+- Low and predictable pricing
+- Simpler alternative to:
+   - EC2
+   - RDS
+   - ELB
+   - EBS
+   - Route53
+
+Good for:
+- Users with limited cloud experience
+
+Monitoring:
+- Notification support
+- Resource monitoring
+
+Use Cases:
+
+1. Simple web applications
+   - LAMP
+   - Nginx
+   - MEAN
+   - Node.js
+
+2. Websites
+   - WordPress
+   - Magento
+   - Plesk
+   - Joomla
+
+3. Development / Testing environments
+Limitations:
+- High availability available
+- No auto scaling
+- Limited AWS integrations
