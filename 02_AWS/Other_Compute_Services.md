@@ -396,3 +396,78 @@ Limitations:
 - High availability available
 - No auto scaling
 - Limited AWS integrations
+
+# Other Compute – Summary
+
+## Docker
+- Container technology used to run applications
+
+## ECS (Elastic Container Service)
+- Runs Docker containers on EC2 instances
+
+## Fargate
+- Runs Docker containers without provisioning infrastructure
+- Serverless offering (no EC2 instances to manage)
+
+## ECR (Elastic Container Registry)
+- Private repository for Docker images
+
+## AWS Batch
+- Runs batch jobs on AWS across managed EC2 instances
+
+## Amazon Lightsail
+- Low-cost and predictable pricing
+- Used for simple applications and database stacks
+
+# Lambda Summary
+
+## Lambda Overview
+- Serverless
+- Function as a Service (FaaS)
+- Automatic scaling
+- Event-driven / reactive
+
+## Lambda Billing
+Charged based on:
+- Execution time × RAM allocated
+- Number of invocations (requests)
+
+## Language Support
+Supports:
+- Python
+- Java
+- Node.js
+- C#
+- Ruby
+- Custom Runtime API
+- Docker container images
+
+## Invocation Time
+- Maximum execution time: **15 minutes**
+
+## Common Use Cases
+- Create thumbnails for images uploaded to Amazon S3
+- Run serverless scheduled jobs (Cron jobs)
+- Event processing
+- Backend processing
+
+## API Gateway
+- Used to expose Lambda functions as HTTP APIs
+
+# Quick Revision Notes
+
+### ECS
+- Manage EC2 instances + containers
+
+### Fargate
+- Only manage containers
+- AWS manages infrastructure
+
+### EKS
+- Managed Kubernetes service
+
+### Lambda
+- Run functions without managing servers
+
+### AWS Batch
+- Used for long-running or background jobs
