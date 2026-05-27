@@ -157,3 +157,76 @@ fi
 exit 0
 ```
 
+## Functions
+- If you are repeating yourself, use a function.
+- Reusuable code.
+- Must be defined before use.
+- Has parameter support.
+
+## Creating a function
+- function function-name() {
+  # code 
+}
+
+- function-name() {
+  # code
+}
+
+## Calling a function
+```bash
+#!/bin/bash
+function hello() {
+  echo "Hello!"
+}
+hello
+```
+
+## FUnctions can call other functions
+``` bash
+#!/bin/bash
+function hello() {
+  echo "Hello!"
+  now
+}
+function now() {
+  echo "It's $(date +%r)"
+}
+hello
+```
+
+## Positional Parameters
+- Functions can accept parameters.
+- The first parameter is stired in $1
+- The second parameter is stored in $2, etc
+- $@ contains all of the parameters
+- Just like shell scripts ($0 = the script itself, not function name)
+
+```bash
+#!/bin/bash
+function hello() {
+  echo "Hello $1"
+}
+hello Jason
+```
+
+```bash
+#!/bin/bash
+function hello() {
+  for NAME in $@
+  do
+    echo "Hello $NAME"
+  done
+}
+hello Jason Dan Ryan
+```
+
+## Variable Scope
+- By default, variables are global
+- Variables have to be defined before used
+
+## Local Variables
+- Can only be accesses within the function
+- Create using the local keyword
+- local LOCAL_VAR = 1
+- Only functions can have local variables
+- Best practice to keep variables local in functions
