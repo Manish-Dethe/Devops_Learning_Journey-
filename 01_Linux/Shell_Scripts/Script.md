@@ -230,3 +230,11 @@ hello Jason Dan Ryan
 - local LOCAL_VAR = 1
 - Only functions can have local variables
 - Best practice to keep variables local in functions
+
+## Exit Status
+- Functions have an exit status
+- Explicitly (return <RETURB_CODE>)
+- Implicity (The exit status of the last command executed in the function)
+- Valid exit codes range from 0 to 255
+- 0 = success
+- $? = the exit status
