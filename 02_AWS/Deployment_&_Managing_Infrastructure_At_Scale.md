@@ -260,3 +260,130 @@ CodeCommit is AWS's Git-based repository service.
 ### Comparison
 - GitHub → Popular public Git hosting service
 - CodeCommit → AWS-managed Git repository service
+
+# AWS CodeBuild
+
+## Overview
+AWS CodeBuild is a cloud-based build service.
+It:
+- Compiles source code
+- Runs tests
+- Produces deployment-ready artifacts
+
+### Workflow
+CodeCommit → CodeBuild → Deployment Artifact → CodeDeploy
+
+## Benefits
+- Fully managed
+- Serverless
+- Continuously scalable
+- Highly available
+- Secure
+- Pay-as-you-go pricing (pay only for build time)
+
+# AWS CodePipeline
+## Overview
+AWS CodePipeline automates and orchestrates the software release process.
+Typical Pipeline:
+Code → Build → Test → Provision → Deploy
+It forms the basis of:
+- Continuous Integration (CI)
+- Continuous Delivery (CD)
+
+## Benefits
+- Fully managed
+- Integrates with:
+  - CodeCommit
+  - CodeBuild
+  - CodeDeploy
+  - Elastic Beanstalk
+  - CloudFormation
+  - GitHub
+  - Third-party services
+  - Custom plugins
+- Faster software delivery
+- Rapid updates
+
+## Example Flow
+CodeCommit
+↓
+CodeBuild
+↓
+CodeDeploy
+↓
+Elastic Beanstalk
+
+(CodePipeline acts as the orchestration layer)
+
+# AWS CodeArtifact
+
+## Overview
+Applications depend on software packages called dependencies.
+Examples:
+- Maven packages
+- npm packages
+- Python packages
+- NuGet packages
+Managing and storing these dependencies is called **Artifact Management**.
+AWS CodeArtifact provides a managed artifact repository.
+
+## Features
+- Secure
+- Scalable
+- Cost-effective
+- Fully managed
+
+## Supported Package Managers
+- Maven
+- Gradle
+- npm
+- Yarn
+- Twine
+- pip
+- NuGet
+
+## Benefits
+- Developers retrieve dependencies directly from CodeArtifact
+- CodeBuild can pull dependencies automatically
+- Eliminates the need to manage your own artifact repository
+
+# AWS Systems Manager (SSM)
+
+## Overview
+AWS Systems Manager helps manage AWS and on-premises infrastructure at scale.
+Supports:
+- Amazon EC2
+- On-premises servers
+- Hybrid environments
+
+## Benefits
+- Centralized operational management
+- Infrastructure visibility
+- Automation capabilities
+- Works across large server fleets
+
+## Important Features
+
+### Patch Manager
+- Automates operating system patching
+- Helps maintain security and compliance
+
+### Run Command
+- Execute commands across many servers simultaneously
+- No need to log in to each server individually
+
+### Parameter Store
+- Store configuration values
+- Store application parameters
+- Store secrets securely
+Examples:
+- Database URLs
+- API endpoints
+- Application settings
+- Credentials
+
+## Supported Operating Systems
+- Linux
+- Windows
+- macOS
+- Raspberry Pi OS (Raspbian)
