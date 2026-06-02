@@ -387,3 +387,56 @@ Examples:
 - Windows
 - macOS
 - Raspberry Pi OS (Raspbian)
+
+# How Systems Manager Works
+- We need to install the SSM agent onto the systems we control
+- Installed by default on Amazon Linux AMI & some Ubuntu AMI
+- If an instance can't be controlled with SSM, it's probably an issue with the SSM agent
+- Thanks to the SSM agent, we can run commands, patch & configure our servers
+
+```
+                SSM
+        ┌─────────────────┐
+        └─────────────────┘
+           ↑        ↑        ↑
+
+    ┌──────────┐ ┌──────────┐ ┌──────────┐
+    │SSM Agent │ │SSM Agent │ │SSM Agent │
+    │EC2       │ │EC2       │ │on premise│
+    │Instance  │ │Instance  │ │VM        │
+    └──────────┘ └──────────┘ └──────────┘
+```
+
+# System Manager - SSM Session Manager
+- Allows you to start a secure shell on your EC2 and on premises servers
+- No SSH access, bastion hosts, or SSH keys needed
+- No port 22 needed (better security)
+- Supports Linux, macOS, and Windows
+- Send Session log data to S3 or CloudWatch Logs
+
+# Systems Manager Parameter Store
+- Secure storage for configuration and secrets
+- API keys, passwords, configurations
+- Serverless, scalable, durable, easy SDK
+- Control access permissions using IAM
+- Version tracking & encryption (optional)
+
+# Deployment - Summary
+
+- CloudFormation : (AWS only)
+  - Infrastructure as Code, works with almost all of AWS resources
+  - Repeat across Regions & Accounts
+- Beanstalk : (AWS only)
+  - Platform as a Service (PaaS), limited to certain programming languages or Docker
+  - Deploy code consistently with a known architecture,
+    ex : ALB + EC2 + RDS
+- Code Deploy (hybrid) : deploy & upgrade any application onto servers
+- Systems Manager (hybrid) : patch, configure and run commands at scale
+
+# Developer Services - Summary
+- Code Commit : Store code in private git repository (version controlled)
+- Code Build : Build & test code in AWS
+- Code Deploy : Deploy code onto servers
+- Code Pipeline : Orchestration of pipeline (from code to build to deploy)
+- Code Artifact : Store software packages / dependencies on AWS
+- AWS CDK : Define your cloud infrastructure using a programming language
