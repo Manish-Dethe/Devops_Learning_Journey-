@@ -33,3 +33,72 @@
 
 - AWS Global Accelerator :
   - Improve global application availability and performance using the AWS global network
+
+# Amazon Route 53 Overview
+- Route53 is a Managed DNS (Domain Name System)
+- DNS is a collection of rules and records which helps clients understand how to reach a server through URLs
+
+- In AWS the most common records are:
+  - www.google.com → 12.34.56.78 = A record (IPv4)
+  - www.google.com → 2001:0db8:5803:00 = AAAA IPv6
+  - search.google.com => www.google.com = CNAME (hostname redirection)
+  - example.com → AWS resource => Alias (ex: ELB, CloudFront, S3 website)
+
+# Route 53 - Diagram For a Record
+
+- Web browser
+  - HTTP request
+  - IP : 32.45.67.89
+
+- DNS request
+  - myapp.mydomain.com
+
+- Route53
+  - send back IP : 10.32.45.67.89
+  - (A record / hostname IP)
+
+- HTTP Response
+
+- Application server
+  - IP : 32.45.67.89
+
+# Route 53 Routing Policies
+- Need to know them at a high level for cloud practitioner exam
+
+## SIMPLE ROUTING POLICY
+- No health checks
+
+## WEIGHTED ROUTING POLICY
+- Weight 70%
+- Weight 20%
+- Weight 10%
+
+## LATENCY ROUTING POLICY
+- Application is global, then for users it will send them to the nearest EC2 (server) & connect with it
+
+## FAILOVER ROUTING
+- Health checks
+- Primary
+- Failover
+
+# AWS CloudFront
+- Content Delivery Network (CDN)
+- Improves read performance, content is cached at the edge
+- Improves users experience
+- Hundreds of points of presence globally (edge locations, edge caches)
+- DDoS protection (because worldwide), integration with Shield, AWS Web Application Firewall
+
+# CloudFront - Origins
+- S3 bucket
+  - For distributing files and caching them at the edge
+  - For uploading files to S3 through CloudFront
+  - Secured using Origin Access Control (OAC)
+
+- VPC Origin
+  - For applications hosted in VPC private subnets
+  - Private Application Load Balancer / Network Load Balancer
+  - EC2 Instances
+
+- Custom Origin (HTTP)
+  - S3 Website (must first enable the bucket as a static S3 website)
+  - Any public HTTP backend you want (ex : Public ALB)
