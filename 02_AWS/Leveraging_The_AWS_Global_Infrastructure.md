@@ -102,3 +102,44 @@
 - Custom Origin (HTTP)
   - S3 Website (must first enable the bucket as a static S3 website)
   - Any public HTTP backend you want (ex : Public ALB)
+
+# CloudFront at a high level
+
+- Client
+- CloudFront Edge Location
+  - Cache
+  - Local Cache
+- Origin
+  - S3
+  - HTTP
+- Forward Req. to your origin
+Request Example:
+- GET /beach.jpg?size=300x300 HTTP/1.1
+- User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
+- Host: www.example.com
+- Accept-Encoding: gzip, deflate
+
+# CloudFront - S3 as an origin
+- AWS Cloud
+  - Edge Los Angeles
+  - Edge Mumbai
+  - Edge Sao Paulo
+  - Edge Melbourne
+- Origin (S3 Bucket)
+- OAC
+- Origin Access Control + S3 Bucket Policy
+- Public WWW
+- Private AWS
+
+# CloudFront vs S3 Cross Region Replication
+
+## CloudFront
+- Global Edge network
+- Files are cached for a TTL (maybe a day)
+- Great for static content that must be available everywhere
+
+## S3 Cross Region Replication
+- Must be setup for each region you want replication to happen
+- Files are updated in near real-time
+- Read only
+- Great for dynamic content that needs to be available at low latency in few regions
