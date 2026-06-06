@@ -143,3 +143,59 @@ Request Example:
 - Files are updated in near real-time
 - Read only
 - Great for dynamic content that needs to be available at low latency in few regions
+
+# S3 Transfer Acceleration
+- Increase transfer speed by transferring file to an AWS edge location which will forward the data to the S3 bucket in the target region
+
+- File in VSH
+- Edge Location
+- Private AWS
+- S3 Bucket
+- Australia
+
+# AWS Global Accelerator
+- Improve global application availability and performance using the AWS global network
+- Leverage the AWS internal network to optimize the route to your application (60% improvement)
+- 2 Anycast IP are allocated for your application and traffic is sent through Edge Locations.
+- The Edge locations send the traffic to your application
+
+# AWS Global Accelerator vs CloudFront
+- They both use the AWS global network and its edge locations around the world
+- Both services integrate with AWS Shield for DDoS protection
+
+- CloudFront
+  - Content Delivery Network
+  - Improves performance for your cacheable content (such as images and videos)
+  - Content is served at the edge
+
+- Global Accelerator
+  - No caching, proxying packets at the edge to applications running in one or more AWS regions
+  - Improve performance for a wide range of applications over TCP or UDP
+  - Good for HTTP use cases that require static IP addresses
+  - Good for HTTP use cases that required deterministic, fast regional failover
+
+# AWS Outposts
+- Hybrid cloud : business that keep an on-premise infrastructure alongside a cloud infrastructure
+- Therefore, two ways of dealing with IT systems
+  - One for the AWS cloud (using the AWS console, CLI and APIs)
+  - One for their on-premises infrastructure
+
+- AWS Outposts are "server racks" that offers the same AWS infrastructure, services, APIs & tools to build your own applications on-premises just as in the cloud
+- AWS will setup and manage "outposts" within your on-premise infrastructure and you can start leveraging AWS services on premises
+- You are responsible for the outpost rack physical security
+
+# Benefits
+- Low latency access to on premises systems
+- Local data processing
+- Data residency
+- Easier migration from on premises to the cloud
+- Fully managed service
+
+- Some services that works on Outposts
+  - Amazon EC2
+  - Amazon EBS
+  - Amazon S3
+  - Amazon EKS
+  - Amazon ECS
+  - Amazon RDS
+  - Amazon EMR
