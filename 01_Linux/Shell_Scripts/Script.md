@@ -238,3 +238,47 @@ hello Jason Dan Ryan
 - Valid exit codes range from 0 to 255
 - 0 = success
 - $? = the exit status
+
+## Wildcards
+- A character or string used for pattern matching.
+- Globbing expands the wildcard pattern into a list of files and/or directories. (paths)
+- Wildcards can be used with most commands (ls, rm, cp).
+
+- *- matches zero or more characters
+ 1. *.txt
+ 2. a*
+ 3. a*.txt
+
+- ?- matches exactly one character
+ 1. ?.txt
+ 2. a?
+ 3. a?.txt
+
+## More Wildcards - Character Classes
+
+# [] - A character class
+- Matches any of the characters included between the brackets. Matches exactly one character
+- [aeiou]
+- ca[nt]* -> (can, cat, candy, catch)
+
+# [!]
+- Matches any of the characters NOT included between the brackets. Matches exactly one character
+- [!aeiou]* -> (baseball, cricket)
+
+# Ranges
+- Use two characters seperated by a hyphen to create a range in a character class.
+- [a-g]* -> Matches all files that start with a,b,c,d,e,f or g.
+- [3-6]* -> Matches all files that start with 3,4,5 or 6.
+
+# Named Character Classes
+- [[:alpha:]]
+- [[:alnum:]]
+- [[:digit:]]
+- [[:lower:]]
+- [[:space:]]
+- [[:upper:]]
+
+# Matching Wildcard patterns
+- \- escape character. Use if you want to match a wildcard character
+- Match all files that end with the question mark: *\? -> done? (filename)
+ 
