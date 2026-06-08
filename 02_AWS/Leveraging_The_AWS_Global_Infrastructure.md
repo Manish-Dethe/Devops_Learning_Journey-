@@ -199,3 +199,71 @@ Request Example:
   - Amazon ECS
   - Amazon RDS
   - Amazon EMR
+
+# AWS Wavelength
+- Wavelength zones are infrastructure deployments embedded within the telecommunications providers datacenters at the edge of the 5G networks
+- Brings AWS services to the edge of the 5G networks
+- Ex - EC2, EBS, VPC...
+- Ultra low latency applications through 5G networks
+- Traffic doesn't leave the communication service providers (CSP) network
+- High bandwidth and secure connection to the parent AWS Region
+- No additional charges or service agreements
+- Use cases : Smart cities, ML-assisted diagnostics, connected vehicles, Interactive Live video streams, AR/VR, Real time Gaming
+
+# AWS Local Zones
+- Places AWS compute, storage, database and other selected AWS services closer to end users to run latency sensitive applications
+- Extend your VPC to more locations - "Extended of AWS Region"
+- Compatible with EC2, RDS, ECS, EBS, ElastiCache, Direct Connect...
+- Example
+  - AWS Region : N. Virginia (us-east-1)
+  - AWS Local Zones : Boston, Chicago, Dallas, Houston, Miami..
+
+# Global Applications Architecture
+
+## Single Region, Single AZ
+- High Availability (X)
+- Global latency (X)
+- Difficulty (low)
+
+## Single Region, Multi AZ
+- High Availability (✓)
+- Global latency (X)
+- Difficulty (medium)
+
+## Multi Region, Active-Passive
+- Global Read's Latency (✓)
+- Global Write's Latency (X)
+- Difficulty (medium-high)
+
+## Multi Region, Active-Active
+- Read's Latency (✓)
+- Write's Latency (✓)
+- Difficulty (high)
+
+# Leveraging the AWS Global Infrastructure - Summary
+
+## Global DNS : Route 53
+- Great to route users to the closest deployment with least latency
+- Great for disaster recovery strategies
+
+## Global Content Delivery Network (CDN) : CloudFront
+- Replicate part of your applications to AWS Edge Locations, decrease latency
+- Cache common requests - improved user experience and decreased latency
+
+## S3 Transfer Acceleration
+- Acceleration global uploads & downloads into Amazon S3
+
+## AWS Global Accelerator
+- Improve global applications availability and performance using the AWS global network
+
+## AWS Outposts
+- Deploy Outposts Racks in your own Data Centers to extend AWS services
+
+## AWS Wavelength
+- Brings AWS services to the edge of the 5G network
+- Ultra low latency applications
+
+## AWS Local Zones
+- Bring AWS resources (compute, database, storage...)
+  closer to your users
+- Good for latency sensitive applications
