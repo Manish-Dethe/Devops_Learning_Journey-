@@ -105,3 +105,47 @@ SNS Topic
 Email Notification
 
 - Trigger Lambda functions, send SQS/SNS messages
+
+# Amazon EventBridge
+- AWS Services (EC2, Lambda, S3) → Default Event Bus
+- AWS SaaS Partners (Zendesk, DataDog) → Partner Event Bus
+- Custom Apps → Custom Event Bus
+
+- Schema Registry: model event schema
+- You can archive events (all/filter) sent to an event bus (indefinitely or set period)
+- Ability to replay archived events
+
+# AWS CloudTrail
+- Provides governance, compliance and audit for your AWS account
+- CloudTrail is enabled by default
+- Get a history of events / API calls made within your AWS account by:
+  - Console
+  - SDK
+  - CLI
+  - AWS Services
+
+- Can put logs from CloudTrail into CloudWatch Logs or S3
+- A trail can be applied to all regions (default) or single region
+- If a resource is delete in AWS, investigate CloudTrail first!
+
+# AWS X-Ray
+- Visual analysis of our applications
+
+## Debugging in Production, the good old way:
+- Test locally
+- Add log statements everywhere
+- Re-deploy in production
+
+- Log formats differ across applications and log analysis is hard
+- Debugging: one big monolith "easy", distributed services "hard"
+- No common view of your entire architecture
+
+## AWS X-Ray advantages
+- Troubleshooting performance (bottlenecks)
+- Understand dependencies in a microservice architecture
+- Pinpoint service issues
+- Review request behavior
+- Find errors and exceptions
+- Are we meeting time SLA?
+- Where I am throttled?
+- Identify users that are impacted
