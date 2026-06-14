@@ -149,3 +149,49 @@ Email Notification
 - Are we meeting time SLA?
 - Where I am throttled?
 - Identify users that are impacted
+
+# AWS Health Dashboard
+
+## Service History
+- Show all regions, all services health
+- Show historical information for each day
+- Has an RSS feed you can subscribe to
+- Previously called AWS Service Health Dashboard
+
+## Your Account
+- Previously called AWS Personal Health Dashboard (PHD)
+- AWS Account Health Dashboard provides alerts and remediation guidance when AWS is experiencing events that may impact you
+- While the Service Health Dashboard displays the general status of AWS services, Account Health Dashboard gives you a personalized view into the performance and availability of the AWS services underlying your AWS resources
+- The dashboard displays relevant and timely information to help you manage events in progress and provides proactive notification to help you plan for scheduled activities
+- Can aggregate data from an entire AWS organization
+
+## Global Service
+- Shows how AWS outages directly impact you & your AWS resources
+- Alerts, Remediation, proactive, scheduled activities
+
+# Monitoring Summary
+
+## CloudWatch
+- Metrics: monitor the performance of AWS services and billing metrics
+- Alarms: automate notifications, perform EC2 action, notify to SNS based on metric
+
+## Logs
+- Collect log files from EC2 instances, servers, Lambda functions
+
+## Events (or EventBridge)
+- React to events in AWS, or trigger a rule on a schedule
+
+## CloudTrail
+- Audit API calls made within your AWS account
+
+## CloudTrail Insights
+- Automated analysis of your CloudTrail events
+
+## X-Ray
+- Trace requests made through your distributed application
+
+## AWS Health Dashboard
+- Status of all AWS services across all regions
+
+## AWS Account Health Dashboard
+- AWS events that impact your infrastructure
