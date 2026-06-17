@@ -81,3 +81,51 @@ At the AWS Certified Cloud Practitioner Level, you should know:
 - This gives you enhanced security and lower latency to access AWS services
 - VPC Endpoint Gateway: S3 & DynamoDB
 - VPC Endpoint Interface: most services (including S3 & DynamoDB)
+
+# AWS PrivateLink (VPC Endpoint Services)
+- Most secure & scalable way to expose a service to 1000s of VPCs
+- Does not require VPC peering, internet gateway, NAT, route tables
+- Requires a Network Load Balancer (service VPC) and ENI (customer VPC)
+
+# Site to Site VPN & Direct Connect
+- Site to Site VPN
+  - Connects an on premises VPN to AWS
+  - The connection is automatically encrypted
+  - Goes over the public internet
+
+- Direct Connect (DX)
+  - Establish a physical connection between on premises & AWS
+  - The connection is private, secure and fast
+  - Goes over a private network
+  - Takes at least a month to establish
+
+- Site to Site VPN
+  - On premises : must use a Customer Gateway (CGW)
+  - AWS : must use a Virtual Private Gateway (VGW)
+
+# AWS Client VPN
+- Connect from your computer using OpenVPN to your private network in AWS and on-premises
+- Allow you to connect to your EC2 instances over a private IP (just as if you were in the private VPC network)
+- Goes over public internet
+
+# Transit Gateway
+- For having transitive peering between thousands of VPC and on-premises, hub and spoke (star) connection
+- One single Gateway to provide this functionality
+- Works with Direct Connect Gateway, VPN connections
+
+# VPC & Networking Summary
+- VPC : Virtual Private Cloud
+- Subnets : Tied to an AZ, network partition of the VPC
+- Internet Gateway : at the VPC level, provide Internet Access
+- NAT Gateway / Instances : give internet access to private subnets
+- NACL : stateless, subnet rules for inbound and outbound
+- Security Groups : stateful, operate at the EC2 instance level or ENI
+- VPC Peering : connect two VPC with non overlapping IP ranges, non-transitive
+- Elastic IP : fixed public IPv4, ongoing cost if not in use
+- VPC Endpoints : provide private access to AWS services within VPC
+- PrivateLink : privately connect to a service in a 3rd party VPC
+- VPC Flow Logs : network traffic logs
+- Site to Site VPN : VPN over public internet between on-premises DC and AWS
+- Client VPN : OpenVPN connection from your computer into your VPC
+- Direct Connect : dedicated private connection to AWS
+- Transit Gateway : connect thousands of VPC and on-premises networks together
