@@ -87,3 +87,45 @@
   - AWS Shield Advanced
   - AWS Network Firewall
 - Rules are applied to new resources as they are created (good for compliance) across all and future accounts in your organization
+
+# Penetration Testing on AWS Cloud
+- AWS customers are welcome to carry out security assessments or penetration test against their AWS infrastructure without prior approval for 8 services :
+  - Amazon EC2 instances, NAT Gateways, and Elastic Load Balancers
+  - Amazon RDS
+  - Amazon CloudFront
+  - Amazon Aurora
+  - Amazon API Gateways
+  - AWS Lambda and Lambda Edge functions
+  - Amazon Lightsail resources
+  - Amazon Elastic Beanstalk environments
+
+- Prohibited Activities
+  - DNS zone walking via Amazon Route 53 hosted zones
+  - Denial of Service (DoS), Distributed Denial of Service (DDoS), simulated DoS, simulated DDoS
+  - Port flooding
+  - Protocol flooding
+  - Request flooding (login request flooding, API request flooding)
+
+# Encryption with KMS & Cloud HSM
+
+## Data at rest vs Data in transit
+- At rest : data stored or archived on a device
+  - on a hard disk, on a RDS instance, in S3 Glacier Deep Archive, etc.
+- In transit (in motion) : data being moved from one location to another
+  - Transfer from on-premises to AWS, EC2 to DynamoDB, etc
+  - Means data transferred on the network
+- We want to encrypt data in both states to protect it !
+- For this we leverage encryption keys
+
+# AWS KMS (Key Management Service)
+- Anytime you hear "encryption" for an AWS service, it's most likely KMS
+- KMS = AWS manage the encryption keys for us
+- Encryption opt-in :
+  - EBS Volumes : encrypt volumes
+  - S3 buckets : service-side encryption of objects (SSE-S3 enabled by default, SSE-KMS opt in)
+  - Redshift database : encryption of data
+  - RDS database : encryption of data
+  - EFS drives : encryption of data
+- Encryption Automatically enabled :
+  - CloudTrail Logs
+  - S3 Glacier
