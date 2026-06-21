@@ -129,3 +129,48 @@
 - Encryption Automatically enabled :
   - CloudTrail Logs
   - S3 Glacier
+
+# Cloud HSM
+- KMS -> AWS manages the software for encryption
+- CloudHSM -> AWS provisions encryption hardware
+- Dedicated Hardware (HSM = Hardware Security Module)
+- You manage your own encryption keys entirely (not AWS)
+- HSM device is tamper resistant, FIPS 140-2 Level 3 compliant
+
+# Types of KMS Keys
+
+## Customer Managed Key
+- Create, manage and used by the customer, can enable or disable
+- Possibility of rotation policy (new key generated every year, old key preserved)
+- Possibility to bring your own key
+
+## AWS Managed Key
+- Created, managed and used on the customer's behalf by AWS
+- Used by AWS services (aws/s3, aws/ebs, aws/redshift)
+
+## AWS Owned Key
+- Collection of CMKs that an AWS service owns and manage to use in multiple accounts
+- AWS can use those to protect resources in your account (but you can't view the keys)
+
+## CloudHSM Keys (Custom Keystore)
+- Keys generated from your own CloudHSM hardware device
+- Cryptographic operations are performed within the CloudHSM cluster
+
+# AWS Certificate Manager (ACM)
+- Lets you easily provision, manage and deploy SSL/TLS certificates
+- Used to provide in-flight encryption for websites (HTTPS)
+- Support both public and private TLS certificates
+- Free of charge for public TLS certificates
+- Automatic TLS certificate renewal
+- Integrations with (load TLS certificates on)
+  - Elastic Load Balancers
+  - CloudFront Distributions
+  - APIs on API Gateway
+
+# AWS Secrets Manager
+- Newer service, meant for storing secrets
+- Capability to force rotation of secrets every X days
+- Automate generation of secrets on rotation (use Lambda)
+- Integration with Amazon RDS (MySQL, PostgreSQL, Aurora)
+- Secrets are encrypted using KMS
+- Mostly meant for RDS integration
