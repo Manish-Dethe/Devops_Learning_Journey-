@@ -174,3 +174,52 @@
 - Integration with Amazon RDS (MySQL, PostgreSQL, Aurora)
 - Secrets are encrypted using KMS
 - Mostly meant for RDS integration
+
+# AWS Artifact (not really a service)
+- Portal that provides customer with on demand access to AWS compliance documentation and AWS agreements
+- AWS Reports - Allow you to download AWS security and compliance documents from third party auditors, like AWS ISO certifications, Payment Card Industry (PCI), and System and Organization Control (SOC) reports
+- Artifact Agreements - Allow you to review, accept and track the status of AWS agreements such as the Business Associate Addendum (BAA) or the Health Insurance Portability and Accountability Act (HIPAA) for an individual account or in your organization
+- Can be used to support internal audit or compliance
+
+# Amazon GuardDuty
+- Intelligent Threat discovery to protect your AWS account
+- Uses Machine Learning algorithms, anomaly detection, 3rd party data
+- One click to enable (30 days trial), no need to install software
+- Input data includes:
+  - CloudTrail Events logs - unusual API calls, unauthorized deployments
+    - CloudTrail Management Events - create VPC subnet, create trail...
+    - CloudTrail S3 Data Events - get object, list objects, delete objects..
+  - VPC Flow Logs - unusual internal traffic, unusual IP address
+  - DNS Logs - compromised EC2 instances sending encoded data within DNS queries
+- Optional Features - EKS Audit logs, RDS & Aurora, EBS, Lambda, S3 Data Events
+- Can setup EventBridge rules to be notified in case of findings
+- EventBridge rules can target AWS Lambda or SNS
+- Can protect against cryptocurrency attacks (has a dedicated "finding" for it)
+
+- VPC Flow Logs
+- CloudTrail Logs
+- DNS Logs (AWS DNS)
+- Optional Features
+- S3 Logs, EBS Volumes
+- Lambda Network Activity
+- RDS & Aurora Login Activity
+- EKS Audit Logs & Runtime Monitoring
+
+GuardDuty -> EventBridge
+
+- SNS
+- Lambda
+
+# Amazon Inspector
+- Automated Security Assessments
+- For EC2 instances
+  - Leveraging the AWS System Manager (SSM) agent
+  - Analyze against unintended network accessibility
+  - Analyze the running OS against known vulnerabilities
+- For container images push to Amazon ECR
+  - Assessment of container images as they are pushed
+- For Lambda Functions
+  - Identifies software vulnerabilities in function code and package dependencies
+  - Assessment of functions as they are deployed
+- Reporting and integration with AWS Security Hub
+- Send findings to Amazon Event Bridge
