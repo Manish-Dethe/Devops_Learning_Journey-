@@ -223,3 +223,59 @@ GuardDuty -> EventBridge
   - Assessment of functions as they are deployed
 - Reporting and integration with AWS Security Hub
 - Send findings to Amazon Event Bridge
+
+# What does Amazon Inspector evaluate?
+- Remember: only for EC2 instances, container images & Lambda functions
+- Continuous scanning of the infrastructure, only when needed
+- Package vulnerabilities (EC2, ECR & Lambda) - database of CVE
+- Network reachability (EC2)
+- A risk score is associated with all vulnerabilities for prioritization
+
+# AWS Config
+- Helps with auditing and recording compliance of your AWS resources
+- Helps record configurations and changes over time
+- Possibility of storing the configuration data into S3 (analyzed by Athena)
+- Questions that can be solved by AWS Config:
+  - Is there unrestricted SSH access to my security groups?
+  - Do my buckets have any public access?
+  - How has my ALB configuration changed over time?
+- You can receive alerts (SNS notifications) for any changes
+- AWS Config is a per-region service
+- Can be aggregated across regions and accounts
+
+## Config Resources
+- View compliance of a resource over time
+- View configuration of a resource over time
+- View CloudTrail API calls if enabled
+
+# Amazon Macie
+- Amazon Macie is a fully managed data security and data privacy service that uses machine learning and pattern matching to discover and protect your sensitive data in AWS
+- Macie helps identify and alert you to sensitive data, such as Personally Identifiable Information (PII)
+Flow:
+S3 Bucket → Macie (Analyze) → Discover Sensitive Data (PII) → Amazon EventBridge (Notify) → Integrations
+
+# AWS Security Hub
+- Central security tool to manage security across several AWS accounts and automate security checks
+- Integrated dashboards showing current security and compliance status to quickly take actions
+- Automatically aggregates alerts in predefined or personal findings format from various AWS services & AWS partner tools:
+  - AWS Config
+  - GuardDuty
+  - Inspector
+  - Macie
+  - IAM Access Analyzer
+  - AWS Systems Manager
+  - AWS Firewall Manager
+  - AWS Health
+  - AWS Partner Network solutions
+- Must first enable the AWS Config service
+
+# Amazon Detective
+- GuardDuty, Macie and Security Hub are used to identify potential security issues, or findings
+- Sometimes security findings require deeper analysis to isolate the root cause and take action - it's a complex process
+- Amazon Detective analyzes, investigates, and quickly identifies the root cause of security issues or suspicious activities (using ML and graphs)
+- Automatically collects and processes events from:
+  - VPC Flow Logs
+  - CloudTrail
+  - GuardDuty
+- Creates a unified view
+- Produces visualizations with details and context to get to the root cause
