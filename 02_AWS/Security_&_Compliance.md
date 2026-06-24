@@ -279,3 +279,62 @@ S3 Bucket → Macie (Analyze) → Discover Sensitive Data (PII) → Amazon Event
   - GuardDuty
 - Creates a unified view
 - Produces visualizations with details and context to get to the root cause
+
+# AWS Abuse
+- Report suspected AWS resources used for abusive or illegal purposes
+
+## Abusive & prohibited behaviors are:
+- Spam
+  - Receiving undesired emails from AWS-owned IP addresses
+  - Websites & forums spammed by AWS resources
+- Port Scanning
+  - Sending packets to your ports to discover unsecured/open ports
+- DoS or DDoS Attacks
+  - AWS-owned IP addresses attempting to overwhelm or crash your servers/software
+- Intrusion Attempts
+  - Logging in to your resources without authorization
+- Hosting Objectionable or Copyrighted Content
+  - Distributing illegal or copyrighted content without consent
+- Distributing Malware
+  - AWS resources distributing software designed to harm computers or machines
+
+# Root User Privileges
+- Root User = Account Owner (created when the AWS account is created)
+- Has complete access to all AWS services and resources
+- Lock away your AWS account root user access keys
+- Do not use the root account for everyday tasks, even administrative tasks
+
+## Actions that can only be performed by the Root User
+- Change account settings
+  - Account name
+  - Email address
+  - Root user password
+  - Root user access keys
+- View certain tax invoices
+- Close your AWS account
+- Restore IAM user permissions
+- Change or cancel your AWS Support Plan
+
+# Reserved Instance Marketplace
+- Register as a seller in the Reserved Instance Marketplace
+- Configure an Amazon S3 bucket to enable MFA
+- Edit or delete an Amazon S3 bucket policy that includes an invalid VPC ID or VPC Endpoint ID
+- Sign up for AWS GovCloud
+
+# IAM Access Analyzer
+- Finds out which resources are shared externally
+
+### Resources analyzed
+- S3 Buckets
+- IAM Roles
+- KMS Keys
+- Lambda Functions and Layers
+- SQS Queues
+- Secrets Manager Secrets
+
+### How it works
+- Defines a Zone of Trust
+  - AWS Account
+  - AWS Organization
+- Identifies resources that can be accessed from outside the defined zone of trust
+- Generates findings for resources that have external access
