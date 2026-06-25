@@ -338,3 +338,74 @@ S3 Bucket → Macie (Analyze) → Discover Sensitive Data (PII) → Amazon Event
   - AWS Organization
 - Identifies resources that can be accessed from outside the defined zone of trust
 - Generates findings for resources that have external access
+
+# Summary: Security & Compliance
+- Shared Responsibility Model on AWS
+
+- AWS Shield
+  - Automatic DDoS protection
+  - 24/7 support with Shield Advanced
+
+- AWS WAF
+  - Firewall to filter incoming requests based on rules
+
+- AWS KMS
+  - Encryption keys managed by AWS
+
+- AWS CloudHSM
+  - Hardware encryption
+  - Customer manages the encryption keys
+
+- AWS Certificate Manager (ACM)
+  - Provision, manage and deploy SSL/TLS certificates
+
+- AWS Artifact
+  - Access compliance reports such as PCI, ISO, SOC, etc.
+
+- Amazon GuardDuty
+  - Detect malicious behavior using:
+    - VPC Flow Logs
+    - DNS Logs
+    - CloudTrail Logs
+
+- Amazon Inspector
+  - Detect software vulnerabilities in:
+    - EC2 instances
+    - Amazon ECR container images
+    - AWS Lambda functions
+
+- AWS Network Firewall
+  - Protect VPCs against network attacks
+
+- AWS Config
+  - Track configuration changes
+  - Check compliance against AWS Config rules
+
+- Amazon Macie
+  - Discover sensitive data (for example, PII) in Amazon S3 buckets
+
+- AWS CloudTrail
+  - Track API calls made by users within an AWS account
+
+- AWS Security Hub
+  - Collect and centralize security findings from multiple AWS accounts and services
+
+- Amazon Detective
+  - Find the root cause of security issues and suspicious activities
+
+- AWS Abuse
+  - Report AWS resources used for abusive or illegal purposes
+
+- Root User Privileges
+Only the Root User can perform actions such as:
+  - Change account settings
+  - Close the AWS account
+  - Change or cancel the AWS Support Plan
+  - Register as a seller in the Reserved Instance Marketplace
+
+- IAM Access Analyzer
+  - Identify resources that are shared externally
+
+- AWS Firewall Manager
+  - Centrally manage security rules across an AWS Organization
+  - Manage WAF, AWS Shield, AWS Network Firewall, and Security Groups
