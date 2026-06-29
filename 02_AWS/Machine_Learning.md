@@ -98,3 +98,50 @@ CRM
 ## Sample Use Cases
 - Analyze customer interactions (emails) to identify what led to a positive or negative experience
 - Create and group articles by topics discovered by Amazon Comprehend
+
+# Amazon SageMaker AI
+- Fully managed service for developers and data scientists to build Machine Learning (ML) models
+- Simplifies the entire Machine Learning lifecycle in one place
+- Eliminates the need to manually provision servers for ML workloads
+- Example Machine Learning process:
+  - Predicting your exam score based on training data
+
+# Amazon Kendra
+- Fully managed document search service powered by Machine Learning
+- Extracts answers from documents such as:
+  - Text files
+  - PDF
+  - HTML
+  - PowerPoint
+  - MS Word
+  - FAQs
+- Supports natural language search capabilities
+- Learns from user interactions and feedback to improve search results (Incremental Learning)
+- Allows manual fine-tuning of search results based on:
+  - Importance of data
+  - Freshness
+  - Custom ranking
+
+# Amazon Personalize
+- Fully managed Machine Learning service for building applications with real-time personalized recommendations
+
+## Examples
+- Personalized product recommendations
+- Re-ranking search results
+- Customized direct marketing
+- Example:
+  - User buys gardening tools
+  - Amazon Personalize recommends related products to buy next
+
+## Features
+- Uses the same recommendation technology as Amazon.com
+- Integrates with:
+  - Existing websites
+  - Applications
+  - SMS systems
+  - Email marketing systems
+- Can be implemented in days instead of months (no need to build, train, and deploy ML models manually)
+
+## Use Cases
+- Retail stores
+- Media and entertainment
