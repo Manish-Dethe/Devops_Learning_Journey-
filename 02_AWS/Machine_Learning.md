@@ -145,3 +145,40 @@ CRM
 ## Use Cases
 - Retail stores
 - Media and entertainment
+
+# Amazon Textract
+- Automatically extracts text, handwriting, and structured data from scanned documents using AI and Machine Learning
+- Extracts data from:
+  - Forms
+  - Tables
+- Reads and processes different document types:
+  - PDF files
+  - Images
+
+## Use Cases
+
+### Financial Services
+- Invoices
+- Financial reports
+
+### Healthcare
+- Medical records
+- Insurance claims
+
+### Public Sector
+- Tax forms
+- ID documents
+- Passports
+
+# AWS Machine Learning - Summary
+- **Amazon Rekognition** – Face detection, image labeling, celebrity recognition
+- **Amazon Transcribe** – Audio to text (e.g., subtitles)
+- **Amazon Polly** – Text to speech
+- **Amazon Translate** – Language translation
+- **Amazon Lex** – Build conversational bots (chatbots)
+- **Amazon Connect** – Cloud contact center
+- **Amazon Comprehend** – Natural Language Processing (NLP)
+- **Amazon SageMaker** – Machine Learning platform for developers and data scientists
+- **Amazon Kendra** – Machine Learning powered search engine
+- **Amazon Personalize** – Real-time personalized recommendations
+- **Amazon Textract** – Detect and extract text and structured data from documents
