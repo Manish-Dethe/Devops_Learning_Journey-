@@ -178,3 +178,78 @@ AWS has **4 pricing models**:
 - SageMaker
 - Setup from the AWS Cost Explorer console
 - Estimate
+
+# AWS Compute Optimizer
+- Reduce cost and improve performance by recommending optimal AWS resources for your workloads
+- Helps you choose optimal configurations and right size your workloads (over/under provisioned)
+- Uses Machine Learning to analyze your resources configuration and their utilizations CloudWatch metrics
+
+## Supported Resources
+- EC2 instances
+- EC2 Auto Scaling Groups
+- EBS Volumes
+- Lambda functions
+- Lower your cost by up to 25%
+- Recommendations can be exported to S3
+
+# Billing and Costing Tools
+
+## Estimating costs in the cloud
+- Pricing Calculator
+
+## Tracking costs in the cloud
+- Billing Dashboard
+- Cost Allocation Tags
+- Cost and Usage Reports
+- Cost Explorer
+
+## Monitoring against cost plans
+- Billing Alarms
+- Budgets
+
+# Cost Allocation Tags
+- Use cost allocation Tags to track your AWS costs on a detailed level
+
+## AWS generated tags
+- Automatically applied to the resource you create
+- Starts with Prefix `aws:`
+
+## User defined tags
+- Defined by the user
+- Starts with Prefix `user:`
+
+# Tagging and Resource Groups
+- Tags are used for organizing resources
+- EC2:
+  - Instances
+  - Images
+  - Load Balancers
+  - Security Groups
+- RDS, VPC resources, Route 53, IAM Users, etc.
+- Resources created by CloudFormation are all tagged the same way
+- Free naming, common tags are:
+  - Name
+  - Environment
+  - Team
+- Tags can be used to create Resource Groups
+  - Create, maintain, and view a collection of resources that share common tags
+  - Manage these tags using the Tag Editor
+
+# Cost and Usage Reports
+- The AWS Cost & Usage Report contains the most comprehensive set of AWS cost and usage data available, including additional metadata about AWS services, pricing, and reservations (e.g. Amazon EC2 Reserved Instances (RIs))
+- The AWS Cost & Usage Report lists AWS usage for each service category used by an account and its IAM users in hourly or daily line items, as well as any tags that you have activated for cost allocation purposes
+- Can be integrated with:
+  - Athena
+  - Redshift
+  - QuickSight
+
+# Cost Explorer
+- Visualize, understand and manage your AWS costs and usage over time
+- Create custom reports that analyze cost & usage data
+- Analyze your data at a high level:
+  - Total costs and usage across all accounts
+  - Monthly
+  - Hourly
+  - Resource level granularity
+- Choose an optimal Savings Plan (to lower prices on your bill)
+- Forecast usage up to 12 months based on previous page
