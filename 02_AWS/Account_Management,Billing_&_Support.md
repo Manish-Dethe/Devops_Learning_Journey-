@@ -253,3 +253,66 @@ AWS has **4 pricing models**:
   - Resource level granularity
 - Choose an optimal Savings Plan (to lower prices on your bill)
 - Forecast usage up to 12 months based on previous page
+
+# Monitoring Alarms in the Cloud - Billing Alarm & AWS Budgets
+
+## Billing Alarm in CloudWatch
+- Billing data metrics is stored in CloudWatch us-east-1
+- Billing data are for overall worldwide AWS costs
+- It's for actual cost, not for projected costs
+- Intended as a simple alarm (not as powerful as AWS Budgets)
+
+# AWS Budgets
+- Create budget and send alarms when costs exceeds the budget
+- 4 types of budgets:
+  - Usage
+  - Cost
+  - Reservation
+  - Savings Plan
+
+## For Reserved Instances (RI)
+- Track utilization
+- Supports:
+  - EC2
+  - ElastiCache
+  - RDS
+  - RedShift
+- Up to 5 SNS notifications per budget
+- Can filter by:
+  - Service
+  - Linked Account
+  - Tag
+  - Purchase option
+  - Instance Type
+  - Region
+  - Availability Zone
+  - API operation
+  - etc...
+- Same options as AWS Cost Explorer
+
+# AWS Cost Anomaly Detection
+- Continuously monitor your cost and usage, using ML to detect unusual spends
+- It learns your unique, historic spend patterns to detect one time cost spike and/or continuous cost increases (you don't need to define thresholds)
+- Monitor AWS services, member accounts, cost allocation tags or cost categories
+- Sends you the anomaly detection report with root cause analysis
+- Get notified with individual alerts or daily/weekly summary (using SNS)
+
+# AWS Service Quotas
+- Notify you when you're close to a service quota value threshold
+- Create CloudWatch Alarms on the Service Quotas console
+- Example:
+  - Lambda concurrent executions
+- Request a quota increase from AWS Service Quotas or shutdown resources before limit is reached
+
+# Trusted Advisor
+- No need to install anything - high level AWS account assessment
+- Analyze your AWS accounts and provides recommendation on 6 categories:
+  - Cost optimization
+  - Performance
+  - Security
+  - Fault tolerance
+  - Service limits
+  - Operational Excellence
+- Business & Enterprise Support Plan
+  - Full set of checks
+  - Programmatic Access using AWS Support API
