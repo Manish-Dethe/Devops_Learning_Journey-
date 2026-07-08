@@ -316,3 +316,91 @@ AWS has **4 pricing models**:
 - Business & Enterprise Support Plan
   - Full set of checks
   - Programmatic Access using AWS Support API
+
+# Support Plans for AWS
+
+## AWS Basic Support Plan
+- Customer Service & Communities
+  - 24 x 7 access to customer service, documentation, whitepapers, and support forums
+- AWS Trusted Advisor
+  - Access to the 7 core Trusted Advisor checks and guidance to provision your resources following best practices to increase performance and improve security.
+- AWS Personal Health Dashboard
+  - A personalized view of the health of AWS services, and alerts when your resources are impacted
+
+## AWS Business Support+ Plan (24/7)
+- Intended to be used if you have production workloads
+- Real time and contextual responses through Gen AI
+- Trusted Advisor
+  - Full set of checks + API access
+- 24 x 7 phone, web, and chat access to Cloud Support Engineers
+- Unlimited cases / unlimited contacts
+- Max 30 minutes of waiting before getting a human support response for business-critical system down cases
+- 3rd party software support (Ex: EC2 OS like Ubuntu)
+
+## AWS Enterprise Support Plan (24/7)
+- Intended to be used if you have production or business critical workloads
+- All of Business Support+ Plan
+- Access to designated Technical Account Manager (TAM)
+- Less than 15 minute production critical case response
+- Access to AWS Security Incident Response (helps you recover from security incidents)
+- Business reviews from AWS experts
+- Access to AWS Countdown event management
+
+## AWS Unified Operations Support Plan (24/7)
+- Intended to be used if you have mission critical workloads
+- All of Business Support Plan +
+- Application Architecture Guidance
+  - Helps you design architectures that fit your use case, workloads
+- Short term engagement with AWS support for deep understanding, analysis then provide architectural guidance
+- Access to a designated
+  - Technical Account Manager (TAM), Domain Specialist Engineer (DSE)
+  - Senior Billing and Account Specialist (SBAS), Incident Management Engineer (IME)
+  - Migration Specialist (On demand), Specialist Support Engineer (SSE)
+- Access to AWS Countdown Premium and AWS Customer Incident Response Team (CIRT)
+- Critical workloads review, operational procedures...
+
+# Account Best Practices - Summary
+- Operate multiple accounts using Organizations
+- Use SCP to restrict account power
+- Easily setup multiple accounts with best practices with AWS Control Tower
+- Use Tags & Cost allocation tags for easy management & billing
+- IAM guidelines:
+  - MFA
+  - Least privilege
+  - Password policy
+  - Password rotation
+- Config to record all resources configurations & compliance over time
+- CloudFormation to deploy stacks across account and regions
+- Trusted Advisor to get insights, support plan adapted to your needs
+- Send service logs and Access Logs to S3 or CloudWatch Logs
+- CloudTrail to record API calls made within your account
+- If your Account is compromised:
+  - Change the root password
+  - Delete and rotate all passwords/keys
+  - Contact AWS Support
+- Allow users to create pre defined stacks defined by admins using AWS Service Catalog
+
+# Billing and Costing Tools Summary
+- Compute Optimizer
+  - Recommends resources configuration to reduce costs
+- Pricing Calculator
+  - Cost of services on AWS
+- Billing Dashboards
+  - High level overview
+- Cost Allocation Tags
+  - Tag resources to create detailed reports
+- Cost and Usage Reports
+  - Most comprehensive billing dataset
+- Cost Explorer
+  - View current usage (detailed) & forecast usage
+- Billing Alarms
+  - In us-east-1 track overall & per service billing
+- Budgets
+  - More advanced
+  - Track usage, costs, RI & get alerts
+- Saving Plans
+  - Easy way to save based on long term usage of AWS
+- Cost Anomaly Detection
+  - Detect unusual spends using ML
+- Service Quotas
+  - Notify you when you're close to service quota threshold
