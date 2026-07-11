@@ -52,3 +52,55 @@
 - Configure how your resources interact with each other
 - Generates Infrastructure as Code (IaC) using CloudFormation
 - Ability to import existing CloudFormation / SAM templates to visualize them
+
+# AWS Device Farm
+- Fully managed service that tests your web and mobile apps against desktop browsers, real mobile devices, and tablets
+- Run tests concurrently on multiple devices (speed up execution)
+- Ability to configure device settings (GPS, language, Wi-Fi, Bluetooth, ...)
+
+# AWS Backup
+- Fully managed service to centrally manage and automate backups across AWS services
+- On demand and scheduled backups
+- Supports PITR (Point-in-time Recovery)
+- Retention periods, Lifecycle Management, Backup Policies...
+- Cross-Region Backup
+- Cross-Account Backup (using AWS Organizations)
+
+# Disaster Recovery Strategies
+
+## Backup and Restore
+- Cost (low)
+- S3 → Servers
+
+## Pilot Light
+- Cost (medium)
+- EC2 → Servers
+- Core functions of the app ready to scale, but minimal setup
+
+## Warm Standby
+- Cost (medium high)
+- EC2 → Servers
+- Full versions of the app but at minimum size
+
+## Multi-Site / Hot-Site
+- Cost (high)
+- EC2 → Servers
+- Full version of the app, at full size
+
+# AWS Elastic Disaster Recovery (DRS)
+- Used to be named "CloudEndure Disaster Recovery"
+- Quickly and easily recover your physical, virtual and cloud based servers into AWS
+- Ex:
+  - Protect your most critical databases (including Oracle, MySQL, and SQL Server)
+  - Enterprise apps (SAP)
+  - Protect your data from ransomware attacks
+- Continuous block-level replication for your servers
+
+# AWS DataSync
+- Move large amount of data from on-premises to AWS
+- Can synchronize to:
+  - Amazon S3 (any storage classes including Glacier)
+  - Amazon EFS
+  - Amazon FSx for Windows
+- Replication tasks can be scheduled hourly, daily, weekly
+- The replication tasks are incremental after the first full load
