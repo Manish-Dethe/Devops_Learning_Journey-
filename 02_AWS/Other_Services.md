@@ -104,3 +104,46 @@
   - Amazon FSx for Windows
 - Replication tasks can be scheduled hourly, daily, weekly
 - The replication tasks are incremental after the first full load
+
+# Cloud Migration Strategies: The 7Rs
+
+## Retire
+- Turn off things you don't need (maybe as a result of Re-architecting)
+- Helps with reducing the surface areas of attacks (more security)
+- Save cost, may be up to 10% to 20%
+- Focus your attention on resources that must be maintained
+
+## Retain
+- Do nothing for now (it's still a decision to make in cloud migration)
+- Security, data compliance, performance, unresolved dependencies
+
+## Relocate
+- No business value to migrate, maintenance or mid-range and non-x86 Unix apps
+- Move apps from on-premises to its cloud version
+- Move EC2 instances to a different VPC, AWS account or AWS Region
+- Ex: Transfer servers from VMware Software Defined Data Center (SDDC) to VMware Cloud on AWS
+
+## Rehost ("Lift and Shift")
+- Simple migrations by re-hosting on AWS (applications, databases, data...)
+- Migrate machines (physical, virtual, another cloud) to AWS Cloud
+- No cloud optimizations being done, application is migrated as is
+- Cloud save as much as 30% on cost
+- Ex: Migrate using AWS Application Migration Service
+
+## Replatform ("Lift and Reshape")
+- Ex: Migrate your database to RDS
+- Ex: Migrate your application to Elastic Beanstalk
+- Not changing the core architecture, but leverage some cloud optimizations
+- Save time and money by moving to a fully managed service or serverless
+
+## Repurchase ("Drop and Shop")
+- Moving to a different product while moving to the cloud
+- Often you move to a SaaS platform
+- Expensive in the short term, but quick to deploy
+- Ex: CRM to Salesforce.com, HR to Workday, CMS to Drupal
+
+## Refactor / Re-architect
+- Reimagining how the application is architected using cloud native features
+- Driven by the need of the business to add features and improve scalability, performance, security and agility
+- Move from a monolithic application to micro-services
+- Ex: Move an application to serverless architectures, use AWS S3
