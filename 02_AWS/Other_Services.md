@@ -147,3 +147,35 @@
 - Driven by the need of the business to add features and improve scalability, performance, security and agility
 - Move from a monolithic application to micro-services
 - Ex: Move an application to serverless architectures, use AWS S3
+
+# AWS Application Discovery Service
+- Plan migration projects by gathering information about on-premises data centers
+- Server utilization data and dependency mapping are important for migrations
+- Agentless Discovery (AWS Agentless Discovery Connector)
+  - VM inventory, configuration and performance history such as CPU, memory and disk usage
+- Agent based Discovery (AWS Application Discovery Agent)
+  - System configuration, system performance, running processes and details of the network connections between systems
+- Resulting data can be viewed within AWS Migration Hub
+
+# AWS Application Migration Service (MGN)
+- The "AWS evolution" of CloudEndure Migration, replacing AWS Server Migration Service (SMS)
+- Lift and Shift (rehost) solution which simplify migrating applications to AWS
+- Converts your physical, virtual and cloud-based servers to run natively on AWS
+- Supports wide range of platforms, operating systems, and database
+- Minimal downtime, reduced costs
+
+# AWS Migration Evaluator
+- Helps you build a data driven business case for migration to AWS
+- Provides a clear baseline of what your organization is running today
+- Install Agentless Collector to conduct broad based discovery
+- Take a snapshot of on-premises foot print, server dependencies...
+- Analyze current state, define target state, then develop migration plan
+
+# AWS Migration Hub
+- Central location to collect servers and applications inventory data for the assessment, planning, and tracking of migrations to AWS
+- Helps accelerate your migration to AWS, automate lift and shift
+- AWS Migration Hub Orchestrator
+  - Provides prebuilt templates to save time and effort migrating enterprise apps (e.g. SAP, Microsoft SQL Server...)
+- Supports migration status updates from:
+  - Application Migration Service (MGN)
+  - Database Migration Service (DMS)
