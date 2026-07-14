@@ -179,3 +179,75 @@
 - Supports migration status updates from:
   - Application Migration Service (MGN)
   - Database Migration Service (DMS)
+
+# AWS Fault Injection Simulator (FIS)
+- A fully managed service for running fault injection experiments on AWS workloads
+- Based on Chaos Engineering
+  - Stressing an application by creating disruptive events (e.g. sudden increase in CPU or memory), observing how the system responds, and implementing improvements
+- Helps you uncover hidden bugs and performance bottlenecks
+- Supports the following AWS services:
+  - EC2
+  - ECS
+  - EKS
+  - RDS
+- Use pre-built templates that generate the desired disruptions
+
+# AWS Step Functions
+- Build serverless visual workflows to orchestrate your Lambda functions
+- Features:
+  - Sequence
+  - Parallel execution
+  - Conditions
+  - Timeouts
+  - Error handling
+- Can integrate with:
+  - EC2
+  - ECS
+  - On-premises servers
+  - API Gateway
+  - SQS queues
+  - etc.
+- Supports implementing human approval workflows
+- Use cases:
+  - Order fulfillment
+  - Data processing
+  - Web applications
+  - Any workflow automation
+
+# AWS Ground Station
+- Fully managed service that lets you control satellite communications, process data, and scale your satellite operations
+- Provides a global network of satellite ground stations near AWS Regions
+- Allows you to download satellite data to your AWS VPC within seconds
+- Send satellite data to Amazon S3 or EC2 instances
+- Use cases:
+  - Weather forecasting
+  - Surface imaging
+  - Communications
+  - Video broadcasts
+
+# Amazon Pinpoint
+- Scalable two-way (outbound/inbound) marketing communication service
+- Supports:
+  - Email
+  - SMS
+  - Push notifications
+  - Voice
+  - In-app messaging
+- Ability to segment and personalize messages with the right content for customers
+- Supports receiving customer replies
+- Scales to billions of messages per day
+- Use cases:
+  - Marketing campaigns
+  - Bulk messaging
+  - Transactional SMS messages
+
+## Amazon Pinpoint vs Amazon SNS / Amazon SES
+
+### Amazon SNS & Amazon SES
+- You manage each message's audience, content, and delivery schedule
+
+### Amazon Pinpoint
+- Create message templates
+- Configure delivery schedules
+- Target highly specific customer segments
+- Manage complete marketing campaigns
