@@ -143,3 +143,77 @@
 - IAM
 - AWS CloudFormation
 - Amazon CloudWatch Events
+
+# 3. Reliability
+- Ability of a system to recover from infrastructure or service disruptions, dynamically acquire computing resources to meet demand, and mitigate disruptions such as misconfigurations or transient network issues.
+
+## Design Principles
+- Test recovery procedures
+  - Use automation to simulate failures or recreate failure scenarios.
+- Automatically recover from failure
+  - Anticipate and remediate failures before they occur.
+- Scale horizontally
+  - Increase aggregate system availability by distributing requests across multiple smaller resources to avoid a single point of failure.
+- Stop guessing capacity
+  - Maintain the optimal level of resources to satisfy demand without over or under provisioning.
+  - Use Auto Scaling.
+- Manage change through automation
+  - Use automation to make infrastructure changes.
+
+## Reliability AWS Services
+
+### Foundations
+- IAM
+- Amazon VPC
+- Service Limits
+- AWS Trusted Advisor
+
+### Change Management
+- AWS Auto Scaling
+- Amazon CloudWatch
+- AWS CloudTrail
+- AWS Config
+
+### Failure Management
+- AWS CloudFormation
+- Amazon S3
+- Amazon S3 Glacier
+- Amazon Route 53
+
+# 4. Performance Efficiency
+- Includes the ability to use computing resources efficiently to meet system requirements and maintain efficiency as demand changes and technologies evolve.
+
+## Design Principles
+- Democratize advanced technologies
+  - Advanced technologies become managed services so you can focus more on product development
+- Go global in minutes
+  - Easily deploy applications across multiple AWS Regions.
+- Use serverless architectures
+  - Avoid the burden of managing servers.
+- Experiment more often
+  - Easily perform comparative testing.
+- Mechanical sympathy
+  - Be aware of and choose the AWS services that best fit your workload.
+
+## Performance Efficiency AWS Services
+
+### Selection
+- AWS Auto Scaling
+- AWS Lambda
+- Amazon Elastic Block Store (EBS)
+- Amazon Simple Storage Service (S3)
+- Amazon RDS
+
+### Review
+- AWS CloudFormation
+- AWS News Blog
+
+### Monitoring
+- Amazon CloudWatch
+- AWS Lambda
+
+### Trade-offs
+- Amazon RDS
+- Amazon ElastiCache
+- AWS Snowball
+- Amazon CloudFront
