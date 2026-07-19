@@ -282,3 +282,123 @@ hello Jason Dan Ryan
 - \- escape character. Use if you want to match a wildcard character
 - Match all files that end with the question mark: *\? -> done? (filename)
  
+# Case Satements
+- Alternative to if statements
+ if["$VAR"="one"]
+ elif["$VAR"="two"]
+ elif["$VAR"="three"]
+ elif["$VAR"="four"]
+- May be easier to read that complex if statements.
+
+```bash
+case "$VAR" in
+    pattern_1)
+        # Commands go here.
+        ;;
+    pattern_N)
+        # Commands go here.
+        ;;
+esac
+```
+
+```bash
+case "$1" in
+    start)
+        /usr/sbin/sshd
+        ;;
+    stop)
+        kill $(cat /var/run/sshd.pid)
+        ;;
+esac
+```
+
+```bash
+case "$1" in
+    start|START)
+        /usr/sbin/sshd
+        ;;
+    stop|STOP)
+        kill $(cat /var/run/sshd.pid)
+        ;;
+    *)
+        echo "Usage: $0 start|stop" ; exit 1
+        ;;
+esac
+```
+
+```bash
+read -p "Enter y or n: " ANSWER
+
+case "$ANSWER" in
+    [yY] | [yY][eE][sS])
+        echo "You answered yes."
+        ;;
+    [nN] | [nN][oO])
+        echo "You answered no."
+        ;;
+    *)
+        echo "Invalid answer."
+        ;;
+esac
+```
+
+```bash
+read -p "Enter y or n: " ANSWER
+
+case "$ANSWER" in
+    [yY]*)
+        echo "You answered yes."
+        ;;
+    *)
+        echo "You answered something else."
+        ;;
+esac
+```
+
+# Logging
+- Logs are the who, what, when, where, and why.
+- Output may scroll off the screen.
+- Script may run unattended (via cron, etc.).
+
+## Syslog
+- The syslog standard uses facilities and severities to categorize messages.
+  - **Facilities:** kern, user, mail, daemon, auth, local0, local7
+  - **Severities:** emerg, alert, crit, err, warning, notice, info, debug
+
+- Log file locations are configurable:
+  - `/var/log/messages`
+  - `/var/log/syslog`
+
+## Logging with logger
+- The logger utility
+- By default creates `user.notice` messages.
+
+```bash
+logger "Message"
+
+logger -p local0.info "Message"
+
+logger -t myscript -p local0.info "Message"
+
+logger -i -t myscript "Message"
+```
+
+```bash
+logit () {
+    local LOG_LEVEL=$1
+    shift
+    MSG=$@
+    TIMESTAMP=$(date +"%Y-%m-%d %T")
+    if [ $LOG_LEVEL = 'ERROR' ] || $VERBOSE
+    then
+        echo "${TIMESTAMP} ${HOST}
+${PROGRAM_NAME} [${PID}]: ${LOG_LEVEL} ${MSG}"
+    fi
+}
+```
+```bash
+logit INFO "Processing data."
+
+fetch-data $HOST || logit ERROR "Could not
+fetch data from $HOST"
+```
