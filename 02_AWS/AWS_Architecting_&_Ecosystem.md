@@ -217,3 +217,80 @@
 - Amazon ElastiCache
 - AWS Snowball
 - Amazon CloudFront
+
+# 5. Cost Optimization
+- Includes the ability to run systems to deliver business value at the lowest price point.
+
+## Design Principles
+- Adopt a consumption model
+  - Pay only for what you use.
+- Measure overall efficiency
+  - Use Amazon CloudWatch.
+- Stop spending money on data center operations
+  - AWS manages the infrastructure, allowing customers to focus on business projects.
+- Analyze and attribute expenditure
+  - Accurately identify system usage and costs.
+  - Measure Return on Investment (ROI).
+  - Use resource tags for cost allocation.
+- Use managed and application-level services
+  - Reduce total cost of ownership.
+  - Managed services operate at cloud scale and offer a lower cost per transaction or service.
+
+## Cost Optimization AWS Services
+
+### Expenditure Awareness
+- AWS Budgets
+- AWS Cost and Usage Report
+- AWS Cost Explorer
+- Reserved Instance Reporting
+
+### Cost-Effective Resources
+- Spot Instances
+- Reserved Instances
+- Amazon S3 Glacier
+
+### Matching Supply and Demand
+- AWS Auto Scaling
+- AWS Lambda
+
+### Optimizing Over Time
+- AWS Trusted Advisor
+- AWS Cost and Usage Report
+
+# 6. Sustainability
+- The Sustainability pillar focuses on minimizing the environmental impact of running cloud workloads.
+
+## Design Principles
+- Understand your impact
+  - Establish performance indicators and evaluate improvements.
+- Establish sustainability goals
+  - Set long-term goals for each workload.
+  - Measure Return on Investment (ROI).
+- Maximize utilization
+  - Right-size workloads to maximize resource efficiency.
+- Anticipate and adopt new, more efficient hardware and software
+  - Design for flexibility to adopt new technologies.
+- Use managed services
+  - Managed services automate sustainability best practices.
+  - Move infrequently accessed data to cold storage.
+  - Adjust compute capacity automatically.
+- Reduce the downstream impact of cloud workloads
+  - Reduce the energy and resources required by your services.
+  - Upgrade services when beneficial.
+
+## Sustainability AWS Services
+- EC2 Auto Scaling
+- AWS Lambda
+- AWS Fargate
+- AWS Cost Explorer
+- AWS Graviton2
+- EC2 Spot Instances
+- Amazon EFS-IA
+- Amazon S3 Glacier
+- EBS Cold HDD Volumes
+- S3 Intelligent-Tiering
+- Amazon Data Lifecycle Manager
+- Amazon RDS Read Replicas
+- Amazon Aurora Global Database
+- Amazon DynamoDB Global Tables
+- Amazon CloudFront
