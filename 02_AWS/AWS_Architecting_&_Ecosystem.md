@@ -294,3 +294,72 @@
 - Amazon Aurora Global Database
 - Amazon DynamoDB Global Tables
 - Amazon CloudFront
+
+# AWS Well-Architected Tool
+- Free tool to review your architectures against the 6 pillars of the Well-Architected Framework and adopt architectural best practices.
+
+## How does it work?
+- Select your workload and answer questions.
+- Review your answers against the 6 pillars.
+- Obtain advice:
+  - Get videos and documentation.
+  - Generate a report.
+  - View results in a dashboard.
+
+# AWS Customer Carbon Footprint Tool
+- Track, measure, review, and forecast the carbon emissions generated from your AWS usage.
+- Helps you meet your sustainability goals.
+
+# AWS Cloud Adoption Framework (AWS CAF)
+- Helps you build and execute a comprehensive plan for digital transformation using AWS.
+- Created by AWS professionals using AWS best practices and lessons learned from thousands of customers.
+- AWS CAF identifies specific organizational capabilities required for successful cloud transformations.
+- AWS CAF groups capabilities into six perspectives:
+  - Business
+  - People
+  - Governance
+  - Platform
+  - Security
+  - Operations
+
+# CAF Perspectives and Foundational Capabilities
+
+## Business Capabilities
+
+### Business Perspective
+- Ensures cloud investments accelerate digital transformation goals and business outcomes.
+
+### People Perspective
+- Acts as a bridge between technology and business.
+- Accelerates the cloud journey.
+- Helps organizations evolve toward a culture of:
+  - Continuous growth
+  - Learning
+  - Business-as-normal change
+- Focuses on:
+  - Culture
+  - Organizational structure
+  - Leadership
+  - Workforce
+
+### Governance Perspective
+- Helps orchestrate cloud initiatives.
+- Maximizes organizational benefits.
+- Minimizes transformation-related risks.
+
+## Technical Capabilities
+
+### Platform Perspective
+- Build an enterprise-grade, scalable hybrid cloud platform.
+- Modernize existing workloads.
+- Implement new cloud-native solutions.
+
+### Security Perspective
+- Helps achieve:
+  - Confidentiality
+  - Integrity
+  - Availability
+- Protects cloud workloads and data.
+
+### Operations Perspective
+- Ensures cloud services are delivered at a level that meets business requirements.
