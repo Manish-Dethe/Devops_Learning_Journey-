@@ -363,3 +363,83 @@
 
 ### Operations Perspective
 - Ensures cloud services are delivered at a level that meets business requirements.
+
+# Cloud Transformation Value Chain
+
+## Transformation Domains
+- Technology
+- Process
+- Organization
+- Product
+
+## Foundational Capabilities
+- Business
+- People
+- Governance
+- Platform
+- Security
+- Operations
+
+## Business Outcomes
+- Reduce business risk
+- Improve ESG
+- Grow revenue
+- Increase operational efficiency
+
+# AWS CAF – Transformation Domains
+
+## Technology
+- Use the cloud to migrate and modernize:
+  - Legacy infrastructure
+  - Applications
+  - Data and analytics platforms
+
+## Process
+- Digitize, automate, and optimize business operations.
+- Leverage new data and analytics platforms to create actionable insights.
+- Use Machine Learning (ML) to improve customer service experience.
+
+## Organization
+- Reimagine your operating model.
+- Organize teams around products and value streams.
+- Use Agile methods to rapidly iterate and evolve.
+
+## Product
+- Reimagine your business model.
+- Create new value propositions (products and services).
+- Develop new revenue models.
+
+# AWS CAF – Transformation Phases
+
+## Envision
+- Demonstrate how cloud adoption accelerates business outcomes.
+- Identify transformation opportunities.
+- Build a foundation for digital transformation.
+
+## Align
+- Identify capability gaps across the six AWS CAF perspectives.
+- Create an action plan.
+
+## Launch
+- Build and deliver pilot initiatives in production.
+- Demonstrate incremental business value.
+
+## Scale
+- Expand pilot initiatives to the desired scale.
+- Realize the expected business benefits.
+
+# AWS Right Sizing
+- Amazon EC2 offers many instance types, but choosing the most powerful instance is not always the best option because the cloud is elastic.
+- Right sizing is the process of matching instance types and sizes to workload performance and capacity requirements at the lowest possible cost.
+- Since scaling up is easy, always start small.
+- Analyze deployed instances and identify opportunities to eliminate or downsize resources without affecting capacity or business requirements, reducing costs.
+
+## When to Perform Right Sizing
+- Before a cloud migration.
+- Continuously after cloud onboarding, as workload requirements change over time.
+
+## Helpful AWS Tools
+- Amazon CloudWatch
+- AWS Cost Explorer
+- AWS Trusted Advisor
+- Third-party monitoring and optimization tools
