@@ -443,3 +443,33 @@
 - AWS Cost Explorer
 - AWS Trusted Advisor
 - Third-party monitoring and optimization tools
+
+# AWS Ecosystem – AWS Support
+
+## Developer Support
+- Business hours email access to Cloud Support Associates.
+- General guidance response time: **< 24 business hours**.
+- System impaired response time: **< 12 business hours**.
+
+## Business Support
+- 24×7 phone, email, and chat access to Cloud Support Engineers.
+- Production system impaired: **< 4 hours**.
+- Production system down: **< 1 hour**.
+
+## Enterprise Support
+- Access to a **Technical Account Manager (TAM)**.
+- Concierge Support Team (for billing and account best practices).
+- Business-critical system down: **< 15 minutes**.
+
+# AWS Marketplace
+- Digital catalog containing thousands of software listings from independent software vendors (3rd-party).
+
+## Examples
+- Custom AMIs (custom OS, firewalls, technical solutions, etc.)
+- AWS CloudFormation templates
+- Software as a Service (SaaS)
+- Containers
+
+## Key Points
+- Purchases made through AWS Marketplace are added to your AWS bill.
+- You can also sell your own solutions on AWS Marketplace.
