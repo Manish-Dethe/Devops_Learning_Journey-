@@ -473,3 +473,43 @@
 ## Key Points
 - Purchases made through AWS Marketplace are added to your AWS bill.
 - You can also sell your own solutions on AWS Marketplace.
+
+# AWS Professional Services & Partner Network
+- AWS Professional Services is a global team of experts.
+- They work alongside your team and a selected member of the APN (AWS Partner Network).
+
+## AWS Partner Network (APN)
+- **APN = AWS Partner Network**
+
+### APN Technology Partners
+- Provide hardware, connectivity, and software solutions.
+
+### APN Consulting Partners
+- Professional services firms that help customers build solutions on AWS.
+
+### APN Training Partners
+- Help customers learn AWS through training and certification.
+
+### AWS Competency Program
+- AWS Competencies are awarded to APN partners that demonstrate:
+  - Technical proficiency
+  - Proven customer success
+  - Expertise in specialized solution areas
+
+### AWS Navigate Program
+- Helps partners become better AWS partners.
+
+# AWS re:Post
+- AWS-managed Q&A service that provides crowdsourced, expert-reviewed answers to AWS technical questions.
+- Replaces the original AWS Forums.
+
+## Features
+- Community members earn reputation points by:
+  - Providing accepted answers
+  - Reviewing answers from other users
+- Questions from AWS Premium Support customers that are not answered by the community are forwarded to AWS Support engineers.
+
+## Note
+- AWS re:Post is **not intended** for:
+  - Time-sensitive questions
+  - Questions involving proprietary or confidential information
