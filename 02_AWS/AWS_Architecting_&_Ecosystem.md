@@ -513,3 +513,16 @@
 - AWS re:Post is **not intended** for:
   - Time-sensitive questions
   - Questions involving proprietary or confidential information
+
+# AWS Managed Services (AMS)
+- Provides infrastructure and application support on AWS.
+- AWS offers a team of AWS experts who manage and operate your infrastructure for security, reliability, and availability.
+- Helps organizations offload routine management tasks and focus on their business objectives.
+- Fully managed service where AWS handles common operational activities such as:
+  - Change requests
+  - Monitoring
+  - Patch management
+  - Security
+  - Backup services
+- Implements AWS best practices and maintains your AWS infrastructure to reduce operational overhead and risk.
+- AMS business hours are **24×7×365**.
