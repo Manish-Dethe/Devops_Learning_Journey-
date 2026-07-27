@@ -402,3 +402,154 @@ logit INFO "Processing data."
 fetch-data $HOST || logit ERROR "Could not
 fetch data from $HOST"
 ```
+
+# While Loop Format
+
+```bash
+while [ CONDITION_IS_TRUE ]
+do
+    command 1
+    command 2
+    command N
+done
+```
+
+## Infinite Loops
+
+```bash
+while [ CONDITION_IS_TRUE ]
+do
+    # Commands do NOT change
+    # the condition
+    command N
+done
+```
+
+```bash
+while true
+do
+    command N
+    sleep 1
+done
+```
+## Example - Loop 5 Times
+
+```bash
+INDEX=1
+
+while [ $INDEX -lt 6 ]
+do
+    echo "Creating project-${INDEX}"
+    mkdir /usr/local/project-${INDEX}
+
+    ((INDEX++))
+done
+```
+## Output - Loop 5 Times
+```text
+Creating project-1
+Creating project-2
+Creating project-3
+Creating project-4
+Creating project-5
+```
+
+## Example - Checking User Input
+
+```bash
+while [ "$CORRECT" != "y" ]
+do
+    read -p "Enter your name: " NAME
+    read -p "Is ${NAME} correct? " CORRECT
+done
+```
+
+## Output - Checking User Input
+```text
+Enter your name: Luke Skywalker
+Is Luke Skywalker correct? n
+Enter your name: Jason
+Is Jason correct? y
+```
+
+## Example - Return Code of Command
+
+```bash
+while ping -c 1 app1 >/dev/null
+do
+    echo "app1 still up..."
+    sleep 5
+done
+
+echo "app1 down, continuing."
+```
+## Output - Return Code of Command
+```text
+app1 still up...
+app1 still up...
+app1 still up...
+app1 still up...
+app1 still up...
+app1 down, continuing.
+```
+
+## Reading a file, line-by-line
+
+```bash
+LINE_NUM=1
+
+while read LINE
+do
+    echo "${LINE_NUM}: ${LINE}"
+    ((LINE_NUM++))
+done < /etc/fstab
+```
+
+```bash
+grep xfs /etc/fstab | while read LINE
+do
+    echo "xfs: ${LINE}"
+done
+```
+
+```bash
+FS_NUM=1
+
+grep xfs /etc/fstab | while read FS MP REST
+do
+    echo "${FS_NUM}: file system: ${FS}"
+    echo "${FS_NUM}: mount point: ${MP}"
+    ((FS_NUM++))
+done
+```
+
+```bash
+while true
+do
+    read -p "1: Show disk usage. 2: Show uptime. " CHOICE
+
+    case "$CHOICE" in
+        1)
+            df -h
+            ;;
+        2)
+            uptime
+            ;;
+        *)
+            break
+            ;;
+    esac
+done
+```
+
+```bash
+mysql -BNe 'show databases' | while read DB
+do
+    db-backed-up-recently $DB
+    if [ "$?" -eq "0" ]
+    then
+        continue
+    fi
+    backup $DB
+done
+```
