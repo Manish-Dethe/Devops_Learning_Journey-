@@ -553,3 +553,9 @@ do
     backup $DB
 done
 ```
+
+## Debugging
+- A bug is really an error.
+- Examine the inner workings of your script.
+- Determine the root of unexpected behavior.
+- Fix bugs (errors).
