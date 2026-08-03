@@ -655,3 +655,205 @@ echo "$TEST_VAR"
 test
 ```
 
+# Manual Debugging in Bash
+
+## Creating a Debug Variable
+You can create your own debugging code using a special variable such as `DEBUG`.
+
+### Example 1
+```bash
+#!/bin/bash
+DEBUG=true
+if $DEBUG
+then
+    echo "Debug mode ON."
+else
+    echo "Debug mode OFF."
+fi
+```
+
+### Example 2 (Using `&&`)
+```bash
+#!/bin/bash
+DEBUG=true
+$DEBUG && echo "Debug mode ON."
+```
+
+### Example 3 (Using `||`)
+```bash
+#!/bin/bash
+DEBUG=false
+$DEBUG || echo "Debug mode OFF."
+```
+
+### Example 4 (Using a Command Variable)
+```bash
+#!/bin/bash
+DEBUG="echo"
+$DEBUG ls
+```
+
+### Example 5 (Debug Function)
+```bash
+#!/bin/bash
+debug() {
+    echo "Executing: $@"
+    $@
+}
+debug ls
+```
+
+# Manual Copy and Paste
+- Open a second terminal.
+- Copy and paste the commands into the terminal.
+- It can be helpful to use:
+
+```bash
+set -x
+```
+
+# Syntax Highlighting
+Syntax errors are common because of:
+- Typos
+- Missing brackets
+- Missing quotes
+
+Use an editor with syntax highlighting:
+- vi / vim
+- emacs
+- nano
+- gedit
+- kate
+- geany
+
+# PS4 Variable
+The `PS4` variable controls what is displayed before each line when using the `-x` debugging option.
+
+## Default Value
+```
++
+```
+
+### Useful Bash Variables
+- `BASH_SOURCE`
+- `LINENO`
+
+## Custom PS4
+```bash
+PS4='+ $BASH_SOURCE : $LINENO : '
+```
+
+## Example
+```bash
+#!/bin/bash -x
+PS4='+ $BASH_SOURCE : $LINENO : '
+TEST_VAR="test"
+echo "$TEST_VAR"
+```
+
+### Output
+```text
++ PS4='+ $BASH_SOURCE : $LINENO : '
++ ./test.sh : 3 : TEST_VAR=test
++ ./test.sh : 4 : echo test
+test
+```
+
+## PS4 with Function Name
+```bash
+#!/bin/bash -x
+PS4='+ ${BASH_SOURCE}:${LINENO}:${FUNCNAME[0]}() '
+debug() {
+    echo "Executing: $@"
+    $@
+}
+debug ls
+```
+
+### Output
+```text
++ ./test.sh:4:debug(): ls
+```
+
+# DOS vs Linux (Unix) File Types
+
+## Line Endings
+- **Windows (DOS):** CRLF (Carriage Return + Line Feed)
+- **Linux/Unix:** LF (Line Feed)
+
+View special characters:
+
+```bash
+cat -v script.sh
+```
+
+### Example File
+```text
+#!/bin/bash^M
+# This file contains carriage returns.^M
+echo "Hello world."^M
+```
+
+### Error
+```text
+bash: ./test.sh: /bin/bash^M: bad interpreter: No such file or directory
+```
+
+## Identify File Type
+```bash
+file script.sh
+```
+
+### Output (Before Conversion)
+```text
+script.sh: Bourne-Again shell script, ASCII text executable, with CRLF line terminators
+```
+
+## Convert Windows File to Linux Format
+```bash
+dos2unix script.sh
+```
+
+## Verify Again
+```bash
+file script.sh
+```
+
+### Output
+```text
+script.sh: Bourne-Again shell script, ASCII text executable
+```
+
+## How Does This Happen?
+- Using a Windows editor and uploading the file to Linux.
+- Some editors are configured to use CRLF instead of LF.
+- Pasting commands from Windows into a Linux terminal.
+- Copying commands from a web browser directly into a terminal.
+
+# Sed and Streams
+
+## What is `sed`?
+`sed` = **Stream Editor**
+
+A stream is data that travels from:
+- One process to another through a pipe.
+- One file to another using redirection.
+- One device to another.
+
+Examples:
+- Standard Input (stdin)
+- Standard Output (stdout)
+- Standard Error (stderr)
+
+Streams are typically textual data.
+
+# Sed Usage
+`sed` performs text transformations on streams.
+
+Common operations:
+- Substitute text.
+- Remove lines.
+- Append text after specified lines.
+- Insert text before specified lines.
+
+> **Note:** `sed` is generally used programmatically rather than interactively.
