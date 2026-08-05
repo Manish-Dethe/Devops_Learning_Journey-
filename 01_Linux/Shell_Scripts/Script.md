@@ -834,7 +834,6 @@ script.sh: Bourne-Again shell script, ASCII text executable
 
 ## What is `sed`?
 `sed` = **Stream Editor**
-
 A stream is data that travels from:
 - One process to another through a pipe.
 - One file to another using redirection.
@@ -844,12 +843,10 @@ Examples:
 - Standard Input (stdin)
 - Standard Output (stdout)
 - Standard Error (stderr)
-
 Streams are typically textual data.
 
 # Sed Usage
 `sed` performs text transformations on streams.
-
 Common operations:
 - Substitute text.
 - Remove lines.
