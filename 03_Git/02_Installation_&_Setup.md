@@ -25,3 +25,27 @@ Git can be used in two main ways:
 | More powerful/flexible | Easier to use |
 | Requires practice | Beginner-friendly |
 | Consistent commands | Interface differs between tools |
+
+# Git Configuration
+Git needs your **name and email** to identify who made changes/commits.
+
+### Set Username
+```bash
+git config --global user.name "Your Name"
+```
+
+### Set Email
+```bash
+git config --global user.email "your@email.com"
+```
+
+### Check Configuration
+```bash
+git config user.name
+git config user.email
+```
+
+### Important
+- Use a consistent name.
+- Prefer the email associated with your **GitHub account**.
+- `--global` applies the configuration to Git across your machine.
