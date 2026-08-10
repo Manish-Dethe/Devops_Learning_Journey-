@@ -49,3 +49,37 @@ git config user.email
 - Use a consistent name.
 - Prefer the email associated with your **GitHub account**.
 - `--global` applies the configuration to Git across your machine.
+
+# Basic Terminal Commands
+
+## Navigation
+`ls` → List files and folders
+`ls <folder>` → List contents of a folder
+`pwd` → Show current directory
+`cd <folder>` → Enter a folder
+`cd ..` → Go back one directory
+`clear` → Clear terminal
+
+## File & Folder Creation
+`touch <file>` → Create an empty file
+`mkdir <folder>` → Create a directory
+
+## Deletion
+`rm <file>` → Delete a file
+`rm -rf <folder>` → Delete a folder and its contents
+- `-r` → Recursive
+- `-f` → Force
+
+## Opening Folders
+`open .` → Open current folder on macOS
+`start .` → Open current folder on Windows
+
+## Shortcuts
+`~` → Home directory
+`Tab` → Auto-complete file/folder names
+
+### Important
+- These commands are **not Git commands**.
+- They are used to navigate and manage files/folders while working with Git.
+- On Windows, **Git Bash** provides a Unix-like terminal.
+- On macOS/Linux, you can use the **Terminal**.
