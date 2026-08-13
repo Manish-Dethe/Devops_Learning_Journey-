@@ -8,3 +8,13 @@
 - Repositories are independent of each other.
 
 > **Remember:** Git Repository = Project workspace + Git history
+
+# Git Init & Git Status
+`git status` → Shows the current status of the Git repository.
+`git init` → Initializes a new Git repository in the current directory.
+
+## Importan
+- Run `git init` **once per project**.
+- Run it inside the project directory.
+- After `git init`, the directory becomes a Git repository.
+- Use `git status` anytime to check the repository status.
