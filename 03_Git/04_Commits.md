@@ -29,3 +29,18 @@ Prefer separate commits:
 - Most importantly, keep your commit messages **consistent**.
 
 > **Rule:** Use present-tense imperative messages unless your team/project follows a different convention.
+
+# Git Commit Editor
+- `git commit` → Opens the default editor to enter a commit message.
+- The default editor may be **Vim**.
+- `git commit -m "message"` → Creates a commit with a message directly.
+
+## Vim Basics
+- `i` → Insert mode
+- `Esc` → Exit insert mode
+- `:wq` → Save and quit
+
+## Configure VS Code
+```bash
+git config --global core.editor "code --wait"
+```
