@@ -44,3 +44,18 @@ Prefer separate commits:
 ```bash
 git config --global core.editor "code --wait"
 ```
+
+# Git Log
+`git log` → Shows the commit history of a repository.
+
+## Useful Option
+`git log --oneline` → Shows each commit in a single line with a shortened commit hash.
+
+### Why Use `--oneline`?
+- Makes commit history easier to read.
+- Shows the **commit hash** and commit message.
+- Useful when finding a specific commit to revisit or undo later.
+
+## Commit Message Convention
+- The **first line** of a commit message should briefly summarize the change.
+- Additional details can be added on following lines.
