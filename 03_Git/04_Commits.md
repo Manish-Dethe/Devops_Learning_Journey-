@@ -59,3 +59,17 @@ git config --global core.editor "code --wait"
 ## Commit Message Convention
 - The **first line** of a commit message should briefly summarize the change.
 - Additional details can be added on following lines.
+
+# Git GUI
+- Git GUIs provide a **visual interface** for working with Git.
+- They perform the same Git operations as the command line.
+- GUIs are useful for visualizing **commit history**, especially branches and merges.
+
+## Basic GUI Workflow
+`Make Changes` → `Stage` → `Commit`
+
+### Command Line vs GUI
+`git add <file>` → GUI **Stage**
+`git commit -m "message"` → GUI **Commit**
+
+> **Remember:** GUI and CLI are different interfaces for interacting with the same Git repository and `.git` data.
