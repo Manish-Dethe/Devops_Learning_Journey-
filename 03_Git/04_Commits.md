@@ -73,3 +73,17 @@ git config --global core.editor "code --wait"
 `git commit -m "message"` → GUI **Commit**
 
 > **Remember:** GUI and CLI are different interfaces for interacting with the same Git repository and `.git` data.
+
+# Amend Commits
+`git commit --amend` → Redoes/updates the **previous commit**.
+
+## When to Use
+- Forgot to include a file in the previous commit.
+- Need to fix the previous commit message.
+- Can be used to do both.
+
+## Add a Forgotten File
+```bash
+git add <file>
+git commit --amend
+```
