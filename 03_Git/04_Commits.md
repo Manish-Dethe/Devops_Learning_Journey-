@@ -87,3 +87,25 @@ git config --global core.editor "code --wait"
 git add <file>
 git commit --amend
 ```
+
+# .gitignore
+`.gitignore` → Tells Git which files/folders to ignore and not track.
+
+## Why Use `.gitignore`?
+Common things to ignore:
+- Secrets, API keys, credentials
+- OS files like `.DS_Store`
+- Log files
+- Dependencies/packages like `node_modules/`
+- Generated files that can be recreated
+
+## Creating `.gitignore`
+Create `.gitignore` in the **root of the repository**.
+
+Example:
+```text
+secrets.txt
+node_modules/
+.DS_Store
+*.log
+```
