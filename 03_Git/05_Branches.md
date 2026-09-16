@@ -49,3 +49,8 @@
 - When switching branches, `HEAD` moves to the selected branch.
 - `HEAD` always points to the branch currently being worked on.
 - Different branches can point to different commits.
+
+# Git Branch
+- `git branch` lists all existing branches in the repository.
+- It does not create or switch branches.
+- The current branch is marked with an `*` (asterisk).
