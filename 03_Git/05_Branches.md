@@ -54,3 +54,36 @@
 - `git branch` lists all existing branches in the repository.
 - It does not create or switch branches.
 - The current branch is marked with an `*` (asterisk).
+
+# Creating Branches
+- `git branch` lists the existing branches.
+- `git branch <branch-name>` creates a new branch.
+- Creating a branch does not switch to it.
+- The new branch points to the same commit as the current `HEAD`.
+- Branch names should not contain spaces and should be meaningful.
+
+## Switching Branches
+- `git switch <branch-name>` switches to another branch.
+- `HEAD` moves to the branch you switch to.
+- Commits made after switching belong to that branch.
+- Other branches remain unchanged.
+
+# Git Checkout and Git Switch
+- `git checkout <branch-name>` switches to an existing branch.
+- `git checkout` is the older command and can perform multiple operations.
+- `git switch <branch-name>` is the newer command specifically for switching branches.
+- `git switch` is preferred for switching branches.
+
+## Create and Switch to a Branch
+- `git switch -c <branch-name>` creates a new branch and switches to it.
+- `-c` means create.
+
+git switch -c recentish-music
+- `git checkout -b <branch-name>` does the same thing.
+- `-b` means branch.
+
+git checkout -b recentish-music
+- Without `-c` or `-b`, the branch must already exist.
+- Branches can contain multiple files and folders.
+- Branches are not limited to a single file.
+- Switching branches updates the relevant files and folders according to the selected branch.
