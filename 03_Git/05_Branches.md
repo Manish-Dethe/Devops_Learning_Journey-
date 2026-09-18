@@ -87,3 +87,8 @@ git checkout -b recentish-music
 - Branches can contain multiple files and folders.
 - Branches are not limited to a single file.
 - Switching branches updates the relevant files and folders according to the selected branch.
+
+# Switching Branches with Uncommitted Changes
+- If you have uncommitted changes and try to switch branches, Git may prevent the switch.
+- If the changes would be overwritten or conflict with the target branch, Git shows an error.
+- Git asks you to either **commit** or **stash** the changes.
