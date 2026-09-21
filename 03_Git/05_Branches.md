@@ -92,3 +92,18 @@ git checkout -b recentish-music
 - If you have uncommitted changes and try to switch branches, Git may prevent the switch.
 - If the changes would be overwritten or conflict with the target branch, Git shows an error.
 - Git asks you to either **commit** or **stash** the changes.
+
+# Deleting and Renaming Branches
+
+## Delete a Branch
+- `git branch -d <branch-name>` deletes a branch.
+- You cannot delete the branch you are currently on.
+- `-d` deletes the branch only if it has been fully merged.
+- `git branch -D <branch-name>` force deletes a branch even if it is not fully merged.
+- Be careful with `-D` because unmerged work can be lost.
+
+## Rename a Branch
+- `git branch -m <new-name>` renames the current branch.
+- `-m` means move/rename.
+- You must be on the branch you want to rename.
+- Renaming a branch does not change its commits; only the branch name changes.
